@@ -1,0 +1,8 @@
+<view bindtap= "onClick" data-id = "{{restaurant.id}}" wx:for="{{restaurants}}" wx:for-item="restaurant" class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url({{restaurant.image}});">
+  <view class="card-category"> {{restaurant.address}}</view>
+  <view class="card-description">
+    <view class= "h2">{{restaurant.name}}</view>
+    <text class= "p"> {{restaurant.description}}
+    </text>
+  </view>
+</view>
