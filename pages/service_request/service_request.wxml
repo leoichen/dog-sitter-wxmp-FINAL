@@ -1,2 +1,41 @@
 <!--pages/service_request/service_request.wxml-->
-<view>Confirm Request</view>
+<view class="wrapper">
+  <view class="bar-owner-info">
+    <view class="icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
+    <view class="owner-details">
+      <view class="owner-name">Kelvin Chow</view>
+      <view class="owner-address">159 Nanjing Xi Lu, Jing'an District, Shanghai</view>
+    </view>
+  
+  </view>
+  
+
+
+  <view class="bar-request-content">
+    <view class="sitter-avatar" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+    <view class="request-info">
+      <view class="sitter-name">{{first_name}} {{last_name}}</view>
+      <view class="request-service">Dog Sitting</view>
+      <view class="request-time">Aug 5 2018 to Aug 8 2018</view>
+    </view>
+  </view>
+
+  <view class="container-payment-content">
+    <view class="bar-payment-amount">
+      <view class="subtitle">Fee</view>
+      <view class="price">¥ {{price}}.00</view>
+      </view>
+    <view class="bar-payment-method">
+      <view class="subtitle">Payment Method</view>
+      <view class="payment-method">WeChat</view>
+    </view>
+  </view>
+
+  <view class="bar-confirm">
+    <view class="total-price">
+      <view class="total-price-title">Total Fee: </view>
+      <view class="price">¥ {{price}}.00</view>
+    </view>
+    <view class="request-btn" form-type="submit" bindtap='buttonClickedConfirm'>Request</view>
+  </view>
+</view>

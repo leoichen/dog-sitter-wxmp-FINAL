@@ -29,5 +29,5 @@
     <view class="user-profile-reviews-content">{{item.content}}</view>
   </block>
 </view>
-<view><button class="button">Pick!</button></view>
+<view><button class="button" bindtap='buttonClickedConfirm'>Pick!</button></view>
 

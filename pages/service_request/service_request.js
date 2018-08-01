@@ -12,9 +12,39 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    // console.log(options)
+    const page = this;
+    const id = options.id;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/user/1',
+      method: 'GET',
+      success: function (res) {
+        // console.log(res.data.data.user)
+        const user = res.data.data.user;
+        page.setData(user)
+      }
+    });
+    var array = this.data.arr
+    for (let i = 1; i < 1; i++) {
+      array.push("img/" + i + ".jpg")
+    }
+    this.setData({ arr: array })
   },
 
+  buttonClickedConfirm: function () {
+    let p = new Promise((resolve, reject) => {
+      wx.reLaunch({
+        url: '/pages/service_acceptance_await/service_acceptance_await',
+      })
+      resolve()
+    })
+    p.then(function () {
+      wx.showToast({
+        title: 'Accepted',
+        duration: 1500,
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
