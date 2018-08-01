@@ -2,16 +2,14 @@
   "pages":[
     "pages/main/main",
     "pages/logs/logs",
-    "pages/index/index",
-    "pages/show/show",
-    "pages/edit/edit",
-    "pages/new/new", 
     "pages/dog_new/dog_new", 
     "pages/dog_show/dog_show",
     "pages/user_profile/user_profile",
     "pages/service_index/service_index",
+    "pages/service_time/service_time",
     "pages/user_index/user_index",
-    "pages/user_show/user_show"
+    "pages/user_show/user_show",
+    "pages/service_request/service_request"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -1,12 +1,4 @@
-/* pages/service_index/service_index.wxss */
-.radio {
-  display: block;
-  padding: 5px;
-}
-.radio-group {
-  margin-top:36px;
-  margin-left:111px;
-}
+/* pages/service_time/service_time.wxss */
 .banner-service {
   color: white;
   height: 50vh;
@@ -31,6 +23,19 @@ button {
   font-size:15px;
   margin-top:40px;
 }
+.btn {
+  display: flex;
+}
 .service-container {
   background-color: white;
+}
+.section {
+  margin-left:66px;
+  border: 1px solid #0099cc21;
+  margin-top:20px;
+  width: 66%;
+  height:26px;
+  border-radius:10px;
+  padding:4px;
+  font-size: 16px;
 }

@@ -6,9 +6,9 @@ Page({
    */
   data: {
     items: [
-      { name: 'USA', value: 'Dog Sitter' },
-      { name: 'CHN', value: 'Dog Walker', checked: 'true' },
-      { name: 'BRA', value: 'Dog Boarder' }
+      { name: 'Dog Sitter', value: 'Dog Sitter' },
+      { name: 'Dog Walker', value: 'Dog Walker', checked: 'true' },
+      { name: 'Dog Boarder', value: 'Dog Boarder' }
     ]
   },
 
@@ -30,6 +30,11 @@ Page({
   },
   checkboxChange: function (e) {
     console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+  },
+  buttonClicked: function (event) {
+    wx.redirectTo({
+      url: '/pages/service_time/service_time',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
