@@ -64,7 +64,7 @@
 					"name": "dog_show",
 					"pathName": "pages/dog_show/dog_show",
 					"query": ""
-				},
+        },
 				{
 					"id": -1,
 					"name": "service_index",
