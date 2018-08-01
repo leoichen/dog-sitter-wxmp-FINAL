@@ -1,0 +1,47 @@
+<!--pages/service_acceptance/service_acceptance.wxml-->
+<!--pages/service_acceptance_await/service_acceptance_await.wxml-->
+<!--pages/service_request/service_request.wxml-->
+<view class="wrapper">
+  <view class="bar-owner-info">
+    <view class="icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
+    <view class="owner-details">
+      <view class="owner-name">Kelvin Chow</view>
+      <view class="owner-address">159 Nanjing Xi Lu, Jing'an District, Shanghai</view>
+    </view>
+  
+  </view>
+  
+
+
+  <view class="bar-request-content">
+    <view class="sitter-avatar" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+    <view class="request-info">
+      <view class="sitter-name">{{first_name}} {{last_name}}</view>
+      <view class="request-service">Dog Walking</view>
+      <view class="request-time">Aug 10 2018, 6:30 to Aug 10 2018, 7:30</view>
+      <view class="price">¥{{price}}.00</view>
+    </view>
+  </view>
+
+  <view class="bar-confirmation">
+    <view class="confirmation-title">Request accepted!</view>
+    <view class="confirmation-message">{{first_name}} is looking forward to meet with Cookie{{user.dog.name}}!</view>
+  </view>
+
+  <view class="bar-contact">
+    <view class="contact-title">Contact {{first_name}} here</view>
+    <view class="contact-actions">
+      <view class="action-icons">
+        <view class="action-icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
+        <view class="action-icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
+        <view class="action-icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
+      </view>
+      <view class="action-titles">
+        <view class="action-title">Call</view>
+        <view class="action-title">Message</view>
+        <view class="action-title">Profile</view>
+    </view>
+    </view>
+    
+  </view>
+</view>
