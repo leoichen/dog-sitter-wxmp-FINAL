@@ -7,14 +7,14 @@ AV.init({
 });
 App({
   onLaunch: function () {
-    const host = 'http://localhost:3000/'
+    const host = 'http://localhost:3000/';
     console.log('processing to login')
     wx.login({
       success: (res) => {
         console.log(res)
         wx.request({
           url: host + 'api/v1/login',
-          method: 'post',
+          method: 'POST',
           data: {
             code: res.code
           },
