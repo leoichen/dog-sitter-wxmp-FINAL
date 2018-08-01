@@ -49,8 +49,31 @@
 				},
 				{
 					"id": -1,
+					"name": "dog_new",
+					"pathName": "pages/dog_new/dog_new",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "Show",
+					"pathName": "pages/show/show",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "dog_show",
+					"pathName": "pages/dog_show/dog_show",
+					"query": ""
+        },
+        {
+        "id": -1,
 					"name": "service_index",
-					"pathName": "pages/service_index/service_index",
+					"pathName": "pages/service_index/service_index"
+        },
+        {
+          "id": -1,
+					"name": "user_index",
+					"pathName": "pages/user_index/user_index",
 					"query": ""
 				},
 				{
@@ -63,6 +86,12 @@
 					"id": -1,
 					"name": "time",
 					"pathName": "pages/service_time/service_time"
+        },
+        {
+          "id": -1,
+					"name": "user_show",
+					"pathName": "pages/user_show/user_show",
+				"query": ""
 				}
 			]
 		}
