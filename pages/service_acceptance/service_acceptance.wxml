@@ -18,7 +18,7 @@
     <view class="request-info">
       <view class="sitter-name">{{first_name}} {{last_name}}</view>
       <view class="request-service">Dog Sitting</view>
-      <view class="request-time">Aug 5 2018 to Aug 8 2018</view>
+      <view class="request-time">Aug 5 2018 to Aug 8 2018 </view>
       <view class="price">¥{{price}}.00</view>
     </view>
   </view>
