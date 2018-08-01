@@ -1,4 +1,4 @@
-// pages/show/show.js
+// pages/service_request/service_request.js
 Page({
 
   /**
@@ -12,43 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this;
-    const id = options.id;
-wx.request({
-  url: `http://localhost:3000/api/v1/restaurants/${id}`,
-  success: function(res) {
-    console.log(res)
-    const restaurant = res.data;
-    page.setData(restaurant);
-  }
-})
-  },
-
-  editRestaurant: function (event) {
-    console.log(event);
-const data = event.currentTarget.dataset;
-const id = data.id;
-
-// Return to restaurant listing
-wx.navigateTo({
-  url: `/pages/edit/edit?id=${id}`,
-})
-  },
-
-  deleteRestaurant: function(event) {
-    const page = this;
-    console.log(event);
-    const current_id = event.currentTarget.dataset.id;
-
-  wx.request({
-  url: `http://localhost:3000/api/v1/restaurants/${current_id}`,
-  method: 'DELETE',
-  success: function(res) {
-    wx.reLaunch({
-      url: '/pages/index/index',
-    })
-  }
-})
+  
   },
 
   /**

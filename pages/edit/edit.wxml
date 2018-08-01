@@ -1,2 +1,0 @@
-<import src = "/shared/form.wxml"/>
-<template is = "form" data = "{{name: name, description: description, address: address, image: image}}"/>
