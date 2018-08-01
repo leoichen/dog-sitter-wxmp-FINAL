@@ -1,6 +1,6 @@
 //app.js
-const AV = require('./utils/av-weapp-min.js')
-const config = require('./key')
+const AV = require('./utils/av-weapp-min.js');
+const config = require('./key');
 AV.init({
   appId: config.appId,
   appKey: config.appSecret,
@@ -20,7 +20,7 @@ App({
           },
           success: (res) => {
             console.log(res)
-            this.globalData.userId = res.data.userId
+            this.globalData.userId = res.data.userId;
           }
         })
       }
