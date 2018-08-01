@@ -1,0 +1,81 @@
+/* pages/user_show/user_show.wxss */
+.user-profile-image {
+  height: 600rpx;
+  width: 100%;
+  background-size: cover !important;
+}
+
+.user-profile {
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+
+}
+
+.user-profile-content {
+  width: 100%;
+  text-align: left;
+}
+
+.user-profile-main-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile-price {
+  font-size: 22px;
+}
+.user-profile-name {
+  font-size: 24px;
+  color: #74CFCC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.user-profile-address {
+  font-size: 14px;
+  color: rgba(0,0,0,0.5);
+
+}
+.user-profile-bio {
+  font-size: 14px;
+  color: rgba(0,0,0,0.7);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: left;
+  border-bottom: solid 1px rgba(0,0,0,0.2);
+}
+
+.user-profile-reviews {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.user-profile-reviews-title {
+  font-size: 24px;
+  padding-bottom: 5px;
+}
+
+.user-profile-reviews-content{
+  font-size: 14px;
+  color: rgba(0,0,0,0.7);
+}
+
+.user-profile-reviews-rating {
+  font-size: 13px;
+  color: #FFD600;
+}
+
+.button {
+ width: 40%;
+ font-weight: 700;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ order: 2px solid #0099cc;
+ color: white;
+ background: #74CFCC;
+ font-size:15px;
+ margin-top:40px;
+ margin-bottom: 10px;
+}

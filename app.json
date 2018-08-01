@@ -8,6 +8,8 @@
     "pages/new/new",
     "pages/user_profile/user_profile",
     "pages/service_index/service_index"
+    "pages/user_index/user_index",
+    "pages/user_show/user_show"
   ],
   "window":{
     "backgroundTextStyle":"light",
