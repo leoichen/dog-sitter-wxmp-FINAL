@@ -30,7 +30,6 @@ Page({
       url: '../user_index/user_index?query=' + page.data.categories,
     })
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -38,7 +37,6 @@ Page({
     this.setData({
       categories: options.categories
     })
-
   },
 
   /**

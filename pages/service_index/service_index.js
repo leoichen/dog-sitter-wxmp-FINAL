@@ -58,6 +58,11 @@ Page({
       url: '/pages/service_time/service_time',
     })
   },
+  buttonClicked: function (event) {
+    wx.redirectTo({
+      url: '/pages/service_time/service_time',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
