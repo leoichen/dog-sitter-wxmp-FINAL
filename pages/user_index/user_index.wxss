@@ -1,6 +1,6 @@
 /* pages/user_index/user_index.wxss */
 .find-sitter-header {
-  font-size: 40rpx;
+  font-size: 50rpx;
   text-align: center;
   margin: 20rpx auto;
   letter-spacing: 2px;
@@ -8,23 +8,19 @@
 .user-card {
   display:flex;
   height:200rpx;
-  margin:10px auto;
+  margin:18px auto;
   text-align:left;
   align-items:center;
   box-shadow:1px 1px 1px rgba(0,0,0,0.2);
   border-radius:5px;
   width:95%;
-
 }
-
 .user-card-image {
   height: 100%;
   width: 30%;
   background-size: cover !important;
   border-radius: 5px 0px 0px 5px;
-
 }
-
 .user-card-content {
   flex:1 0 30%;
   margin: 20rpx;
@@ -33,26 +29,27 @@
   white-space:pre-wrap;
   text-overflow:clip;
 }
-
 .user-name{
   font-size: 16px;
   color: #74CFCC;
 }
-
 .user-address {
   font-size: 12px;
   color: rgba(0,0,0,0.2);
 }
-
 .user-bio {
 font-size:12px;
 color:rgba(0,0,0,0.7);
 height:100rpx;
 text-overflow:clip;
-
 }
-
 .user-price {
 font-size:13px;
 padding-right: 10px;
+}
+.card-container {
+  margin-top:33px;
+}
+.user-profile-reviews-title {
+  padding-top:12px;
 }

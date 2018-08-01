@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    categories: ''
   },
   bindDateChangeStart: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -24,11 +24,21 @@ Page({
       url: '../service_index/service_index',
     })
   },
+  buttonClickedNext: function(e) {
+    const page = this;
+    wx.navigateTo({
+      url: '../user_index/user_index?query=' + page.data.categories,
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      categories: options.categories
+    })
+
   },
 
   /**

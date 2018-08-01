@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
 	"appid": "wxe1b4e5f749cd203d",
-	"projectname": "Dogsitter",
+	"projectname": "Dog_Sitter",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -21,10 +21,6 @@
 			"list": []
 		},
 		"conversation": {
-			"current": -1,
-			"list": []
-		},
-		"plugin": {
 			"current": -1,
 			"list": []
 		},
@@ -87,8 +83,8 @@
 					"id": -1,
 					"name": "time",
 					"pathName": "pages/service_time/service_time",
-					"query": ""
-				},
+          "query": ""
+        },
 				{
 					"id": -1,
 					"name": "user_show",
@@ -99,7 +95,7 @@
 					"id": -1,
 					"name": "service_request",
 					"pathName": "pages/service_request/service_request",
-					"query": ""
+          "query": ""
 				},
 				{
 					"id": -1,
@@ -110,7 +106,8 @@
 				{
 					"id": -1,
 					"name": "service_acceptance",
-					"pathName": "pages/service_acceptance/service_acceptance"
+					"pathName": "pages/service_acceptance/service_acceptance"，
+          "query": ""
 				}
 			]
 		}
