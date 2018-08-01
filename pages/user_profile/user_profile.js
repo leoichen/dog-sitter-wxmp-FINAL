@@ -1,4 +1,7 @@
 // pages/user_profile/user_profile.js
+
+const app = getApp();
+
 Page({
   getUserInfo: function (e) {
     console.log(e)
