@@ -1,3 +1,4 @@
+/* pages/service_acceptance_await/service_acceptance_await.wxss */
 /* pages/service_request/service_request.wxss */
 
 .wrapper {
@@ -65,68 +66,22 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-.container-payment-content {
-  width: 100%;
-  height: 200rpx;
+.bar-confirmation {
+  height: 600rpx;
+  background: white;
+  text-align: center;
   margin-top: 10px;
-  background: white;
-}
-
-.bar-payment-amount {
-  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
-  display: flex;
-  height: 50%;
   align-items: center;
+  padding-top: 50px;
 }
 
-.subtitle {
-  margin-left: 10px;
-  font-size: 15px;
-  color: rgba(0, 0, 0, 0.6);
-  width: 20%;
-}
-
-.price {
-  margin-left: 10px;
+.confirmation-title {
   color: #74CFCC;
-  font-size: 18px;
-}
-
-.bar-payment-method {
-  display: flex;
-  height: 50%;
-  align-items: center;
-}
-
-.payment-method {
-  margin-left: 10px;
-  font-size: 18px;
-}
-
-.bar-confirm {
-  display: flex;
-  background: white;
-  width: 100%;
-  height: 100rpx;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  bottom: 1px;
-}
-
-.total-price {
-  display: flex;
-}
-
-.total-price-title {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.request-btn {
-  background: #74CFCC;
-  color: white;
-  padding: 10px 25px;
+  font-size: 24px;
 
 }
 
+.confirmation-message {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}

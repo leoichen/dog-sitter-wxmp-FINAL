@@ -1,5 +1,5 @@
 <!--pages/dog_new/dog_new.wxml-->
-<text>pages/dog_new/dog_new.wxml</text>
+
 
 <view class="header">
   <view class="h2-header">Tell us about your dog!</view>
@@ -7,7 +7,7 @@
   <view class="container">
   <view class="wrap">
   
-    <form bindsubmit="bindSubmit">
+    <form bindsubmit="bindSubmit" data-id = "{{id}}">
 
     <view class="user-input">
       <view class="text-area-wrap">
@@ -39,17 +39,24 @@
       </view>
     </view>
 
-    <view class="user-input">
+    <view class="user-input"> 
       <view class="text-area-wrap">
-      <textarea value="{{medical_history}}" style="input-size"placeholder="Medical History" class="input-height" name="medical_history" maxlength="-1" auto-height />
-      </view>
+      <textarea value="{{medical_history}}" placeholder="Medical History" class="input-height" name="medical_history" maxlength="-1" auto-height />
+      </view> 
     </view>
+       
+   
+      <text class="upload-dog">Upload a photo of your cute dog!</text>
+      <button  class='button-upload' bindtap='takePhoto' >Upload Image</button>
+       <image  src='{{ dog_image }}' mode='aspectFill' class='dog-image'></image> 
+      
+      <button  form-type="submit" loading="{{loading}}">Submit</button>
+  
+    </form>
 
 
-    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Submit</button>
-    </form> 
-
-    <button bindtap="viewDog">View your dog</button>
+    
 
   </view>
   </view>
+

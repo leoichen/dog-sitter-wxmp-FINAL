@@ -1,11 +1,14 @@
 // pages/dog_new/dog_new.js
+const AV = require('../../utils/av-weapp-min.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    dog_image: ''
+
   },
 
   /**
@@ -27,16 +30,18 @@ Page({
 
   bindSubmit: function(event) {
     console.log(event)
-    const newDog = event.detail.value;
+    const newDog = event.detail.value; 
+    newDog.image_url = this.data.dog_image;
+    
     wx.request({
      // url: "https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/users/1/dogs",
      url:"http://localhost:3000/api/v1/dogs",
       method:'POST',
       data: {dog: newDog},
-      success(res) {
+      success: function (res) {
         console.log(res) 
-        wx.navigateTo({
-          url: '/pages/dog_show/dog_show'
+        wx.redirectTo({
+          url: '/pages/dog_show/dog_show?id=' + res.data.dog.id
         })
       }
     })
@@ -51,15 +56,17 @@ Page({
       success: function (res) {
         let tempFilePath = res.tempFilePaths[0];
 
-        that.uploadPromise(tempFilePath).then(res => {
+        that.uploadPromise(tempFilePath)
+        .then(res => {
           console.log('You can execute anything here')
           return res
         }).then(res => {
           console.log('Or .. execute more')
           return res
         }).then(res => {
-          let url = `/pages/show/show?leanCloudImage=${res}`
-          wx.navigateTo({ url })
+          that.setData({
+            dog_image: res
+          })
         })
 
       }
@@ -72,8 +79,13 @@ Page({
           uri: tempFilePath,
         },
       }).save()
-        .then(file => resolve(file.url()))
-        .catch(e => reject(e));
+        .then(file => {
+          console.log(file.url())
+          return resolve(file.url())
+        })
+        .catch(e => {
+          return reject(e);
+        });
     })
   },
   

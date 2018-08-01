@@ -1,44 +1,34 @@
-// pages/service_time/service_time.js
+// pages/service_acceptance_await/service_acceptance_await.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    categories: ''
-  },
-  bindDateChangeStart: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date1: e.detail.value
-    })
-  },
-  bindDateChangeEnd: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      date2: e.detail.value
-    })
-  },
-  buttonClickedBack: function(e) {
-    wx.navigateTo({
-      url: '../service_index/service_index',
-    })
-  },
-  buttonClickedNext: function(e) {
-    const page = this;
-    wx.navigateTo({
-      url: '../user_index/user_index?query=' + page.data.categories,
-    })
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      categories: options.categories
-    })
-
+    // console.log(options)
+    const page = this;
+    const id = options.id;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/user/1',
+      method: 'GET',
+      success: function (res) {
+        // console.log(res.data.data.user)
+        const user = res.data.data.user;
+        page.setData(user)
+      }
+    });
+    var array = this.data.arr
+    for (let i = 1; i < 1; i++) {
+      array.push("img/" + i + ".jpg")
+    }
+    this.setData({ arr: array })
   },
 
   /**

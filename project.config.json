@@ -29,7 +29,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 9,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -61,8 +61,8 @@
 					"pathName": "pages/dog_show/dog_show",
 					"query": ""
 				},
-        {
-        "id": -1,
+				{
+					"id": -1,
 					"name": "service_index",
 					"pathName": "pages/service_index/service_index",
 					"query": ""
@@ -85,8 +85,8 @@
 					"pathName": "pages/service_time/service_time",
           "query": ""
         },
-        {
-          "id": -1,
+				{
+					"id": -1,
 					"name": "user_show",
 					"pathName": "pages/user_show/user_show",
 					"query": ""
@@ -95,6 +95,18 @@
 					"id": -1,
 					"name": "service_request",
 					"pathName": "pages/service_request/service_request",
+          "query": ""
+				},
+				{
+					"id": -1,
+					"name": "service_acceptance_await",
+					"pathName": "pages/service_acceptance_await/service_acceptance_await",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "service_acceptance",
+					"pathName": "pages/service_acceptance/service_acceptance"，
           "query": ""
 				}
 			]

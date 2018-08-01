@@ -1,4 +1,4 @@
-// pages/dog_show/dog_show.js
+
 Page({
 
   /**
@@ -13,7 +13,7 @@ Page({
    */
   onLoad: function (options) {
     let page = this;
-
+  console.log(options)
     // Get api data
     wx.request({
       url: `http://localhost:3000/api/v1/dogs/${options.id}`,

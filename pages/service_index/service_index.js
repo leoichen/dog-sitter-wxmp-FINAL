@@ -7,8 +7,8 @@ Page({
   data: {
     selectedCategories: 'Dog Sitter',
     items: [
-      { name: 'Dog Sitter', value: 'Dog Sitter', checked: 'true' },
-      { name: 'Dog Walker', value: 'Dog Walker' },
+      { name: 'Dog Sitter', value: 'Dog Sitter' },
+      { name: 'Dog Walker', value: 'Dog Walker', checked: 'true' },
       { name: 'Dog Boarder', value: 'Dog Boarder' }
     ]
   },
@@ -51,6 +51,11 @@ Page({
           url: '../service_time/service_time?categories=' + page.data.selectedCategories,
         })
       }
+    })
+  },
+  buttonClicked: function (event) {
+    wx.redirectTo({
+      url: '/pages/service_time/service_time',
     })
   },
   /**

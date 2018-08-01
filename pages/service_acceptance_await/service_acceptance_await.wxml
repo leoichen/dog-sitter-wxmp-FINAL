@@ -1,3 +1,4 @@
+<!--pages/service_acceptance_await/service_acceptance_await.wxml-->
 <!--pages/service_request/service_request.wxml-->
 <view class="wrapper">
   <view class="bar-owner-info">
@@ -16,26 +17,13 @@
     <view class="request-info">
       <view class="sitter-name">{{first_name}} {{last_name}}</view>
       <view class="request-service">Dog Sitting</view>
-      <view class="request-time">Aug 5 2018 to Aug 8 2018</view>
+      <view class="request-time">Aug 5 2018 to Aug 8 2018 </view>
+      <view class="price">¥{{price}}.00</view>
     </view>
   </view>
 
-  <view class="container-payment-content">
-    <view class="bar-payment-amount">
-      <view class="subtitle">Fee</view>
-      <view class="price">¥ {{price}}.00</view>
-      </view>
-    <view class="bar-payment-method">
-      <view class="subtitle">Payment Method</view>
-      <view class="payment-method">WeChat</view>
-    </view>
-  </view>
-
-  <view class="bar-confirm">
-    <view class="total-price">
-      <view class="total-price-title">Total Fee: </view>
-      <view class="price">¥ {{price}}.00</view>
-    </view>
-    <view class="request-btn" form-type="submit" bindtap='buttonClickedConfirm'>Request</view>
+  <view class="bar-confirmation">
+    <view class="confirmation-title">Request Confirmed!</view>
+    <view class="confirmation-message">We will get back to you within 24 hours.</view>
   </view>
 </view>

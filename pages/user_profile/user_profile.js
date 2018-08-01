@@ -1,10 +1,33 @@
 // pages/user_profile/user_profile.js
+
+const app = getApp();
+
 Page({
   getUserInfo: function (e) {
     console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
+    app.globalData.userInfo = e.detail.userInfo;
+    const newUserInfo = e.detail.userInfo;
+    console.log(typeof newUserInfo.avatarUrl)
+    const newUser = {
+      first_name: newUserInfo.nickName,
+      address: newUserInfo.city,
+      gender: newUserInfo.gender,
+      image_url: newUserInfo.avatarUrl
+    };
+
     this.setData({
       userInfo: e.detail.userInfo
+    }),
+
+      wx.request({
+        url: 'http://localhost:3000/api/v1/users',
+        method: 'POST',
+        data: {
+          user: newUser
+        },
+        success: function (res) {
+          console.log(res);
+        }
     })
   },
   /**
@@ -66,6 +89,6 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
