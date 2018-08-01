@@ -5,10 +5,19 @@
     "pages/index/index",
     "pages/show/show",
     "pages/edit/edit",
+    "pages/new/new", 
+    "pages/dog_new/dog_new", 
+    "pages/dog_show/dog_show",
     "pages/new/new",
     "pages/user_profile/user_profile",
+<<<<<<< HEAD
     "pages/service_index/service_index",
     "pages/service_time/service_time"
+=======
+    "pages/service_index/service_index"
+    "pages/user_index/user_index",
+    "pages/user_show/user_show"
+>>>>>>> d3828b5c522da19e2a8b864e3b49d240deeb8765
   ],
   "window":{
     "backgroundTextStyle":"light",
