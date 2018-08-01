@@ -14,10 +14,11 @@
   <view class="user-profile-content">
     <view class="user-profile-main-info">
     <view>
-        <view class="user-profile-name">{{first_name}} {{last_name}}</view>
+        <view class="user-profile-name">Domingo</view>
         <view class="user-profile-address">{{address}}</view>
       </view>
-      <view class="user-profile-price">¥{{price}}/night</view>
+      <!-- pls change this hard code -->
+      <view class="user-profile-price">¥194/night</view>
     </view>
     <view class="user-profile-bio">{{bio}}</view>
   </view>
@@ -29,5 +30,5 @@
     <view class="user-profile-reviews-content">{{item.content}}</view>
   </block>
 </view>
-<view><button class="button">Pick!</button></view>
+<view><button class="button" bindtap='buttonClickedConfirm'>Pick!</button></view>
 

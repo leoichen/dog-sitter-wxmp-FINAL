@@ -13,14 +13,23 @@ Page({
   onLoad: function (options) {
     const page = this;
     wx.request({
-      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/users',
+      url: 'https://dog-sitter-woof.herokuapp.com/api/v1/users?query=' + options.query,
       method: 'GET',
       success: function (res) {
-        // console.log(res.data.data.users)
-        const users = res.data.data;
+        // console.log(res.data)
+        // console.log(21, res.data.users)
+        const users = res.data;
         page.setData(users)
+        console.log(users)
       }
     })
+    // wx.request({
+    //   url: 'http://localhost:3000/api/v1/services',
+    //   method: 'GET',
+    //   success(res) {
+    //     const services = res.data.services
+    //   }
+    // })
   },
 
   /**

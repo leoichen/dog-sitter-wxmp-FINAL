@@ -20,5 +20,5 @@
 </view>
 <view class="btn">
   <button bindtap = "buttonClickedBack">Back</button>
-  <button bindtap = "buttonClicked">Next</button>
+  <button bindtap = "buttonClickedNext">Next</button>
 </view>

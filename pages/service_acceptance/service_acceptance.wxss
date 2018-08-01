@@ -1,0 +1,129 @@
+/* pages/service_acceptance/service_acceptance.wxss */
+/* pages/service_acceptance_await/service_acceptance_await.wxss */
+/* pages/service_request/service_request.wxss */
+
+.wrapper {
+  background-color: rgba(0, 0, 0, 0.02);
+  position: relative;
+  height:1211rpx;
+  width:100%;
+
+}
+
+.bar-owner-info {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+  background-size: cover;
+  margin-left: 10px;
+}
+
+.owner-details {
+  margin-left: 10px;
+}
+.owner-name {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.owner-address {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.bar-request-content {
+  width: 100%;
+  height: 290rpx;
+  background: white;
+  margin-top: 10px;
+  display: flex;
+}
+
+.sitter-avatar {
+  background-size: cover !important;
+  height: 120px;
+  width: 120px;
+  margin: 10px 10px;
+}
+
+
+.sitter-name {
+  font-size: 20px;
+  color: #74CFCC;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.request-service, .request-time {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.bar-confirmation {
+  height: 150rpx;
+  background: white;
+  text-align: center;
+  margin-top: 10px;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.confirmation-title {
+  color: #74CFCC;
+  font-size: 24px;
+
+}
+
+.confirmation-message {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+}
+
+.bar-contact {
+  background: white;
+  height: 500rpx;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.contact-title {
+  color:#74CFCC;
+  font-size: 24px;
+}
+
+.contact-actions {
+  height: 200px;
+  margin-top: 40px;
+}
+
+.action-icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-icon {
+  height: 50px;
+  width: 50px;
+  background-size: cover;
+}
+
+.action-titles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+
+.action-title {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+

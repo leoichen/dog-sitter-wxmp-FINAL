@@ -1,4 +1,4 @@
-// pages/edit/edit.js
+// pages/service_acceptance/service_acceptance.js
 Page({
 
   /**
@@ -12,40 +12,24 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  const page = this;
-  const id = options.id;
-
-  wx.request({
-    url: `http://localhost:3000/api/v1/restaurants/${id}`,
-    success: function(res) {
-      console.log(res.data);
-      const restaurant = res.data;
-      page.setData(res.data)
+    // console.log(options)
+    const page = this;
+    const id = options.id;
+    wx.request({
+      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/user/1',
+      method: 'GET',
+      success: function (res) {
+        // console.log(res.data.data.user)
+        const user = res.data.data.user;
+        page.setData(user)
+      }
+    });
+    var array = this.data.arr
+    for (let i = 1; i < 1; i++) {
+      array.push("img/" + i + ".jpg")
     }
-  })
+    this.setData({ arr: array })
   },
-
-
-bindSubmit: function (event) {
-console.log(event)
-const restaurant_form = event.detail.value;
-const id = this.data.id;
-
-// get data from api
-wx.request({
-  url: `http://localhost:3000/api/v1/restaurants/${id}`,
-  method: 'PUT',
-  data: {restaurant: restaurant_form},
-  success: function(res) {
-    console.log(res);
-  }
-})
-
-wx.reLaunch({
-  url: '/pages/index/index',
-})
-},
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
