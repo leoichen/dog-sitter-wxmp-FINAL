@@ -29,7 +29,7 @@
 .user-profile-name {
   font-size: 24px;
   color: #74CFCC;
-  padding-top: 5px;
+  padding-top: 17px;
   padding-bottom: 5px;
 }
 
@@ -55,6 +55,7 @@
 .user-profile-reviews-title {
   font-size: 24px;
   padding-bottom: 5px;
+  margin-top:12px;
 }
 
 .user-profile-reviews-content{

@@ -5,10 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
+    selectedCategories: 'Dog Sitter',
     items: [
-      { name: 'USA', value: 'Dog Sitter' },
-      { name: 'CHN', value: 'Dog Walker', checked: 'true' },
-      { name: 'BRA', value: 'Dog Boarder' }
+      { name: 'Dog Sitter', value: 'Dog Sitter', checked: 'true' },
+      { name: 'Dog Walker', value: 'Dog Walker' },
+      { name: 'Dog Boarder', value: 'Dog Boarder' }
     ]
   },
 
@@ -16,20 +17,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this;
-  wx.request({
-    url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/services',
-    method: 'GET',
-    success: function(res) {
-      console.log(res)
-      const services = res.data.data;
-      console.log(services)
-      page.setData(services)
-    }
-  })
+  //   const page = this;
+  // wx.request({
+  //   url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/services',
+  //   method: 'GET',
+  //   success: function(res) {
+  //     console.log(res)
+  //     const services = res.data.data;
+  //     console.log(services)
+  //     page.setData(services)
+  //   }
+  // })
   },
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+  radioChange: function (e) {
+    console.log(e.detail.value)
+    this.setData({
+      selectedCategories: e.detail.value
+    });
+  },
+  buttonClicked: function () {
+    let page = this;
+    wx.request({
+      url: 'http://localhost:3000/api/v1/services',
+      method: 'GET',
+      data: {
+        categories: page.data.selectedCategories
+      },
+      success: function(res) {
+        console.log(res.data);
+        console.log(res.data.services.map((item) => item.user_id));
+        wx.redirectTo({
+          // url: '../user_index/user_index?user_ids=' + res.data.services.map((item) => item.user_id),
+          url: '../service_time/service_time?categories=' + page.data.selectedCategories,
+        })
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
