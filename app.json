@@ -5,6 +5,9 @@
     "pages/index/index",
     "pages/show/show",
     "pages/edit/edit",
+    "pages/new/new", 
+    "pages/dog_new/dog_new", 
+    "pages/dog_show/dog_show",
     "pages/new/new",
     "pages/user_profile/user_profile",
     "pages/service_index/service_index"

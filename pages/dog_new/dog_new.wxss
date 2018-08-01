@@ -1,0 +1,11 @@
+/* pages/dog_new/dog_new.wxss */
+
+
+.section{
+  display: flex;
+  flex-direction: row;
+  margin: 20rpx;
+}
+.section view{
+  margin-right: 20rpx;
+}

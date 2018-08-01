@@ -1,0 +1,5 @@
+<!--pages/dog_show/dog_show.wxml-->
+<text>pages/dog_show/dog_show.wxml</text> 
+
+<image style="width: 100%; height: 100%"  src="../../image/image.jpg"/> 
+

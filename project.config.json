@@ -13,7 +13,6 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
 	"appid": "wxe1b4e5f749cd203d",
-
 	"projectname": "Dogsitter",
 	"isGameTourist": false,
 	"condition": {
@@ -34,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -50,6 +49,24 @@
 				},
 				{
 					"id": -1,
+					"name": "dog_new",
+					"pathName": "pages/dog_new/dog_new",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "Show",
+					"pathName": "pages/show/show",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "dog_show",
+					"pathName": "pages/dog_show/dog_show",
+					"query": "",
+        }
+        {
+        "id": -1,
 					"name": "service_index",
 					"pathName": "pages/service_index/service_index"
         },
@@ -62,12 +79,14 @@
 				{
 					"id": -1,
 					"name": "landing",
-					"pathName": "pages/main/main"
+					"pathName": "pages/main/main",
+				"query": ""
         },
         {
           "id": -1,
 					"name": "user_show",
-					"pathName": "pages/user_show/user_show"
+					"pathName": "pages/user_show/user_show",
+				"query": ""
 				}
 			]
 		}
