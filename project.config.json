@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
-	"appid": "wxa58cd0260ff7ff46",
+	"appid": "wxe1b4e5f749cd203d",
 	"projectname": "wxmp%20first",
 	"isGameTourist": false,
 	"condition": {
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -44,7 +44,26 @@
 				{
 					"id": -1,
 					"name": "New",
-					"pathName": "pages/new/new"
+					"pathName": "pages/new/new",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dog_new",
+					"pathName": "pages/dog_new/dog_new",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "Show",
+					"pathName": "pages/show/show",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "dog_show",
+					"pathName": "pages/dog_show/dog_show",
+					"query": ""
 				}
 			]
 		}

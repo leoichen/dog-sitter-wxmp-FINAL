@@ -1,0 +1,55 @@
+<!--pages/dog_new/dog_new.wxml-->
+<text>pages/dog_new/dog_new.wxml</text>
+
+<view class="header">
+  <view class="h2-header">Tell us about your dog!</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+  
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{name}}" style="input-size"placeholder="Name" class="input-height" name="name" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{breed}}" style="input-size"placeholder="Breed" class="input-height" name="breed" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{address}}" style="input-size"placeholder="Address" class="input-height" name="address" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{gender}}" style="input-size"placeholder="Gender" class="input-height" name="gender" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{age}}" style="input-size"placeholder="Age" class="input-height" name="age" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{medical_history}}" style="input-size"placeholder="Medical History" class="input-height" name="medical_history" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+    <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Submit</button>
+    </form> 
+
+    <button bindtap="viewDog">View your dog</button>
+
+  </view>
+  </view>
