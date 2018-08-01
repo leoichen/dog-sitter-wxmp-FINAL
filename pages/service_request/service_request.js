@@ -32,14 +32,17 @@ Page({
   },
 
   buttonClickedConfirm: function () {
-    // wx.showToast({
-    //   title: 'Accepted',
-    //   // duration: 2000,
-    // })
-    // setTimeout((),2000);
-
-    wx.reLaunch({
-      url: '/pages/service_acceptance_await/service_acceptance_await',
+    let p = new Promise((resolve, reject) => {
+      wx.reLaunch({
+        url: '/pages/service_acceptance_await/service_acceptance_await',
+      })
+      resolve()
+    })
+    p.then(function () {
+      wx.showToast({
+        title: 'Accepted',
+        duration: 1500,
+      })
     })
   },
   /**
