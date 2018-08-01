@@ -79,12 +79,14 @@
 				{
 					"id": -1,
 					"name": "landing",
-					"pathName": "pages/main/main"
+					"pathName": "pages/main/main",
+				"query": ""
         },
         {
           "id": -1,
 					"name": "user_show",
-					"pathName": "pages/user_show/user_show"
+					"pathName": "pages/user_show/user_show",
+				"query": ""
 				}
 			]
 		}
