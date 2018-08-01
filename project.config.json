@@ -12,8 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
-	"appid": "wxa58cd0260ff7ff46",
-	"projectname": "wxmp%20first",
+	"appid": "wxe1b4e5f749cd203d",
+	"projectname": "dog-sitter",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -44,7 +44,19 @@
 				{
 					"id": -1,
 					"name": "New",
-					"pathName": "pages/new/new"
+					"pathName": "pages/new/new",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user_index",
+					"pathName": "pages/user_index/user_index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user_show",
+					"pathName": "pages/user_show/user_show"
 				}
 			]
 		}

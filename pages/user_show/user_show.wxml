@@ -1,0 +1,33 @@
+<!--pages/user_show/user_show.wxml-->
+<view class="user-profile-image" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+<!-- <view class="user-profile-image">
+  <swiper indicator-dots="{{indicatorDots}}" 
+          autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true"> 
+        <block wx:for="{{arr}}"> 
+          <swiper-item> 
+              <image src="{{item}}" height="200px"/> 
+          </swiper-item> 
+        </block> 
+  </swiper>
+</view> -->
+<view class="user-profile">
+  <view class="user-profile-content">
+    <view class="user-profile-main-info">
+    <view>
+        <view class="user-profile-name">{{first_name}} {{last_name}}</view>
+        <view class="user-profile-address">{{address}}</view>
+      </view>
+      <view class="user-profile-price">¥{{price}}/night</view>
+    </view>
+    <view class="user-profile-bio">{{bio}}</view>
+  </view>
+</view>
+<view class="user-profile-reviews">
+  <view class="user-profile-reviews-title">Reviews</view>
+  <block wx:for="{{reviews}}">
+    <view class="user-profile-reviews-rating">Rating: {{item.rating}}</view>
+    <view class="user-profile-reviews-content">{{item.content}}</view>
+  </block>
+</view>
+<view><button class="button">Pick!</button></view>
+
