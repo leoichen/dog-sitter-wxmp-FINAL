@@ -7,7 +7,8 @@
     "pages/edit/edit",
     "pages/new/new",
     "pages/user_profile/user_profile",
-    "pages/service_index/service_index"
+    "pages/service_index/service_index",
+    "pages/service_time/service_time"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,13 @@
 				{
 					"id": -1,
 					"name": "landing",
-					"pathName": "pages/main/main"
+					"pathName": "pages/main/main",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "time",
+					"pathName": "pages/service_time/service_time"
 				}
 			]
 		}
