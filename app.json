@@ -8,8 +8,8 @@
     "pages/new/new", 
     "pages/dog_new/dog_new", 
     "pages/dog_show/dog_show",
-    "pages/new/new",
     "pages/user_profile/user_profile",
+    "pages/service_time/service_time",
     "pages/service_index/service_index"
     "pages/user_index/user_index",
     "pages/user_show/user_show"

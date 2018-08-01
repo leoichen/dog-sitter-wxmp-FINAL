@@ -1,41 +1,36 @@
-// pages/service_index/service_index.js
+// pages/service_time/service_time.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    items: [
-      { name: 'Dog Sitter', value: 'Dog Sitter' },
-      { name: 'Dog Walker', value: 'Dog Walker', checked: 'true' },
-      { name: 'Dog Boarder', value: 'Dog Boarder' }
-    ]
+  
   },
-
+  bindDateChangeStart: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date1: e.detail.value
+    })
+  },
+  bindDateChangeEnd: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date2: e.detail.value
+    })
+  },
+  buttonClickedBack: function(e) {
+    wx.navigateTo({
+      url: '../service_index/service_index',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const page = this;
-  wx.request({
-    url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/services',
-    method: 'GET',
-    success: function(res) {
-      console.log(res)
-      const services = res.data.data;
-      console.log(services)
-      page.setData(services)
-    }
-  })
+  
   },
-  checkboxChange: function (e) {
-    console.log('checkbox发生change事件，携带value值为：', e.detail.value)
-  },
-  buttonClicked: function (event) {
-    wx.redirectTo({
-      url: '/pages/service_time/service_time',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -85,5 +80,3 @@ Page({
   
   }
 })
-
-

@@ -63,8 +63,8 @@
 					"id": 4,
 					"name": "dog_show",
 					"pathName": "pages/dog_show/dog_show",
-					"query": "",
-        }
+					"query": ""
+        },
         {
         "id": -1,
 					"name": "service_index",
@@ -80,7 +80,12 @@
 					"id": -1,
 					"name": "landing",
 					"pathName": "pages/main/main",
-				"query": ""
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "time",
+					"pathName": "pages/service_time/service_time"
         },
         {
           "id": -1,
