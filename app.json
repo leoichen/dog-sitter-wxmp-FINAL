@@ -6,29 +6,34 @@
     "pages/show/show",
     "pages/edit/edit",
     "pages/new/new",
+    "pages/user_profile/user_profile",
+    "pages/service_index/service_index"
     "pages/user_index/user_index",
     "pages/user_show/user_show"
-  
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Meal Match",
+    "navigationBarTitleText": "Dog Sitter",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
-    "backgroundColor": "#32AAE1",
+    "backgroundColor": "#74CFCC",
     "selectedColor": "white",
     "borderStyle": "black",
-    "color": "black",
+    "color": "white",
     "list": [
       {
         "pagePath": "pages/main/main",
-        "text": "Choose Your Meal"
+        "iconPath": "nav_images/font-awesome-paw.png",
+        "selectedIconPath": "nav_images/font-awesome-paw.png",
+        "text": "Home"
       },
       {
-        "pagePath": "pages/new/new",
-        "text": "Send Your Restaurant"
+        "pagePath": "pages/user_profile/user_profile",
+        "iconPath": "nav_images/font-awesome-user.png",
+        "selectedIconPath": "nav_images/font-awesome-user.png",
+        "text": "My profile"
       }
     ]
   }

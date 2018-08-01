@@ -13,7 +13,8 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.1",
 	"appid": "wxe1b4e5f749cd203d",
-	"projectname": "dog-sitter",
+
+	"projectname": "Dogsitter",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -49,12 +50,22 @@
 				},
 				{
 					"id": -1,
+					"name": "service_index",
+					"pathName": "pages/service_index/service_index"
+        },
+        {
+          "id": -1,
 					"name": "user_index",
 					"pathName": "pages/user_index/user_index",
 					"query": ""
 				},
 				{
 					"id": -1,
+					"name": "landing",
+					"pathName": "pages/main/main"
+        },
+        {
+          "id": -1,
 					"name": "user_show",
 					"pathName": "pages/user_show/user_show"
 				}
