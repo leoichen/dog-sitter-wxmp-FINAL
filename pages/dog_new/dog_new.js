@@ -41,7 +41,7 @@ Page({
         newDog.image_url = page.data.dog_image;
         console.log(3,newDog)
         wx.request({
-          url: `http://localhost:3000/api/v1/dogs`,
+          url: `https://dog-sitter-woof.herokuapp.com/api/v1/dogs`,
           method:'POST',
           data:{
             user_id: userId,
