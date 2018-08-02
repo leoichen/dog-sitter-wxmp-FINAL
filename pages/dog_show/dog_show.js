@@ -6,7 +6,7 @@ Page({
    */
   data: {
     userId: 0,
-   
+    user:[]
   },
 
   /**
@@ -40,13 +40,14 @@ Page({
       console.log(res.data)
       const userId = res.data
       wx.request({
-    url:`http://localhost:3000/api/v1/users/${userId}`, 
+        url:`https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`, 
     method: 'GET',
     success(res) {
-          console.log('dogsss')
-          const user = res.data
-          page.setData(user)
-          // console.log(33, dogs)    
+          console.log('dogsss') 
+          console.log(res.data.user)
+          const user = res.data.user
+          page.setData({user: user})
+             
     }
   });
     }
