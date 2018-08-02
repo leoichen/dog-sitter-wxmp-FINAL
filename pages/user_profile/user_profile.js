@@ -4,7 +4,9 @@ const app = getApp();
 
 Page({
   
-  
+  data: {
+    user: []
+  },
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo;
@@ -23,7 +25,8 @@ Page({
       
       let page = this;
       wx.request({
-        url: 'http://localhost:3000/api/v1/users/',
+        url: 'https://dog-sitter-woof.herokuapp.com/api/v1/users',
+        // url: 'http://localhost:3000/api/v1/users',
         method: 'POST',
         data: {
           user: newUser
@@ -31,12 +34,13 @@ Page({
         success: function (res) {
           console.log(res)
           console.log("user");
-          console.log(res.data.user);
-
+          console.log(22, res.data.user);
+          page.setData({
+            'user': res.data.user
+          })
           wx.setStorageSync('user_id', res.data.user.id)
           
-          // Set Globaldata
-         // app.globalData.user_id = res.data.user.id
+         
           
         }
     })

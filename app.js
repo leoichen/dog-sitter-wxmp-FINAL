@@ -8,12 +8,13 @@ AV.init({
 App({
   onLaunch: function () {
     const host = 'http://localhost:3000/';
+    const heroku = 'https://dog-sitter-woof.herokuapp.com/'
     console.log('processing to login')
     wx.login({
       success: (res) => {
         console.log(res)
         wx.request({
-          url: host + 'api/v1/login',
+          url: heroku + 'api/v1/login',
           method: 'POST',
           data: {
             code: res.code

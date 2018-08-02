@@ -1,3 +1,24 @@
 <!--pages/user_profile/user_profile.wxml-->
-<text>pages/user_profile/user_profile.wxml</text>
+<view class = "header"> Back Arrow </view>
+<view class = "header">Personal 
+</view>
+<!-- line break? -->
+<view class = "header">Center </view>
+
+<block wx:if="{{user}}" class = "avatar-holder">
+<view class = "avatar-holder">
+<view><image  src='{{user.image_url}}'  mode='aspectFill' class='img-avatar'></image> </view>
+<text> {{user.first_name}}</text>
+</view>
+</block>
+
+<block wx:else>
+<view class= "avatar-holder">   
+<view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
+<text> Null </text>
+</view>
+</block>
+
+<!-- <view>{{user}}</view> -->
+
 <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
