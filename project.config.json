@@ -136,7 +136,7 @@
 					"name": "user profile",
 					"pathName": "pages/user_profile/user_profile",
           "query":""
-        }
+        },
         {
           "id": -1,
 					"name": "user show",

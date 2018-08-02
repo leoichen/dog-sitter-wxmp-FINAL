@@ -20,23 +20,19 @@ Page({
     markers: [{
       iconPath: "/icons/shared_icons/marker.png",
       id: 0,
-      latitude: 0,
-      longitude: 0,
+      latitude: 31.2219426,
+      longitude: 121.4365883,
       width: 50,
       height: 50
     }],
     circles: [{
-      latitude: 0,
-      longitude: 0,
+      latitude: 31.2219426,
+      longitude: 121.4365883,
       radius: 150,
       fillColor: "#00000015",
       color: "#74CFCC",
       strokeWidth: 2
-    }],
-    lt: "12.134534",
-    lg: "33.13245",
-    sc: '16',
-    mk: []
+    }]
   },
 
   /**
@@ -68,10 +64,9 @@ Page({
           price: price
         })
       }
-    }),
+    });
 
     const sitterId = options.id;
-    const page = this;
       wx.getStorage({
         key: 'user_id',
         success: function (res) {
@@ -83,13 +78,13 @@ Page({
               // console.log("res", res)
               const longitude = res.data.user.longitude;
               const latitude = res.data.user.latitude;
+              console.log(longitude);
               page.setData("data.markers.latitude", latitude);
               page.setData("data.markers.longitude", longitude);
             }
           });
         }
     });
-    console.log("onLoad markers", this.data.markers)
   },
   onClick: function (e) {
     const page = this;
