@@ -13,7 +13,7 @@
     </view>
   </view>
 </view>
-  <button bindtap = "buttonClicked">Next</button>
+<button bindtap = "buttonClicked">Next</button>
 
 
 
