@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    users: ''
+    users: '',
+    categories: ''
   },
 
   /**
@@ -16,6 +17,7 @@ Page({
     this.setData({
       categories: options.query
     })
+    
     wx.request({
       url: 'https://dog-sitter-woof.herokuapp.com/api/v1/users?query=' + options.query,
       method: 'GET',

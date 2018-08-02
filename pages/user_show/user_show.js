@@ -9,41 +9,15 @@ Page({
     last_name: '',
     address: '',
     bio: '',
-    id: '',
+    serviceid: '',
     price: '',
-    // mode: "scaleToFill",
-    // arr: ["https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60"],
-    // indicatorDots: true,
-    // autoplay: true,
-    // interval: 10000,
-    // duration: 5000,
-    // markers: [{
-    //   iconPath: "/icons/shared_icons/marker.png",
-    //   id: 0,
-    //   latitude: 0,
-    //   longitude: 0,
-    //   width: 50,
-    //   height: 50
-    // }],
-    // circles: [{
-    //   latitude: 0,
-    //   longitude: 0,
-    //   radius: 150,
-    //   fillColor: "#00000015",
-    //   color: "#74CFCC",
-    //   strokeWidth: 2
-    // }],
-    // lt: "12.134534",
-    // lg: "33.13245",
-    // sc: '16',
-    // mk: []
+    user: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
     const page = this;
     const id = options.id;
     // const categories = options.categories
@@ -51,12 +25,14 @@ Page({
       url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${id}`,
       method: 'GET',
       success: function (res) {
+        const user = res.data.user
         const first_name = res.data.user.first_name;
         const last_name = res.data.user.last_name;
         const language = res.data.user.language;
         const address = res.data.user.address;
         const bio = res.data.user.bio;
-        const image_url = res.data.user.image_url
+        const image_url = res.data.user.image_url;
+        const serviceid = res.data.user.services[0].id;
         const price = res.data.user.price
         page.setData({
           id: options.id,
@@ -65,38 +41,23 @@ Page({
           address: address,
           bio: bio,
           image_url: image_url,
-          price: price
+          price: price,
+          user: user,
+          serviceid: serviceid
         })
-      }
+        console.log()
+      },
     })
     },
-    // const sitterId = options.id;
-    // const page = this;
-    //   wx.getStorage({
-    //     key: 'user_id',
-    //     success: function (res) {
-    //       const userId = res.data
-    //       wx.request({
-    //         url: `http://localhost:3000/api/v1/users/${sitterId}`,
-    //         method: 'GET',
-    //         success(res) {
-    //           // console.log("res", res)
-    //           const longitude = res.data.user.longitude;
-    //           const latitude = res.data.user.latitude;
-    //           page.setData("data.markers.latitude", latitude);
-    //           page.setData("data.markers.longitude", longitude);
-    //         }
-    //       });
-    //     }
-    // });
-    // console.log("onLoad markers", this.data.markers)
-  
+   
   onClick: function (e) {
     const page = this;
     wx.navigateTo({
-      url: '../service_request/service_request?id=' + page.data.id
+      // url: '../service_request/service_request?id=' + page.data.id
+      url: '../service_time/service_time?id=' + page.data.serviceid
     })
-    console.log(page.data.id)
+    console.log(page.data.serviceid)
+    // console.log(page.data.id)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

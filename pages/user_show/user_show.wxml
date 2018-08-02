@@ -28,5 +28,7 @@
   </view>
   <view>{{data.longtitude}} </view>
   </view>
-  <view><button class="button" bindtap='onClick'>Pick Me!</button></view>
-
+  <!-- <view><button class="button" bindtap='onClick'>Pick Me!</button></view> -->
+<block wx:for="{{user.services}}" wx:for-item="item">
+  <view><button class="button" bindtap='onClick'>PICK YOUR {{item.categories}}</button></view>
+</block>

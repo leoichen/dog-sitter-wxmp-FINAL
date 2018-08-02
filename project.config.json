@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 20,
 			"list": [
 				{
 					"id": -1,
@@ -135,10 +135,11 @@
 					"id": -1,
 					"name": "user profile",
 					"pathName": "pages/user_profile/user_profile",
+
           "query":""
         },
-        {
-          "id": -1,
+				{
+					"id": -1,
 					"name": "user show",
 					"pathName": "pages/user_show/user_show",
 					"query": ""
@@ -153,7 +154,12 @@
 					"id": -1,
 					"name": "service request",
 					"pathName": "pages/service_request/service_resquest",
-          "query": ""
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my_order",
+					"pathName": "pages/my_order/my_order"
 				}
 			]
 		}

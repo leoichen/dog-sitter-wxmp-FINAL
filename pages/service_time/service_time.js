@@ -6,13 +6,18 @@ Page({
    */
   data: {
     categories: ''
+    
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      categories: options.categories
+    console.log(options)
+    const id = options.id;
+    wx.request({
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/services/${id}/bookings`,
+      method: 'POST',
+
     })
   },
   /**
@@ -26,20 +31,20 @@ Page({
     console.log(page.data.categories)
   },
   bindDateChangeStart: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log(e.detail.value)
     this.setData({
       date1: e.detail.value
     })
   },
   bindDateChangeEnd: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
+    console.log(e.detail.value)
     this.setData({
       date2: e.detail.value
     })
   },
   buttonClickedBack: function (e) {
     wx.navigateTo({
-      url: '../service_index/service_index',
+      url: '../service_request/service_request',
     })
   },
   onReady: function () {

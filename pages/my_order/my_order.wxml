@@ -1,0 +1,8 @@
+<!--pages/my_order/my_order.wxml-->
+<view class="title">My Orders</view>
+
+
+<view class="date">Tomorrow</view>
+  <view class="orders">
+    <view class="order"></view>
+  </view>

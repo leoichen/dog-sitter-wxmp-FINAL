@@ -39,6 +39,9 @@ Page({
             'user': res.data.user
           })
           wx.setStorageSync('user_id', res.data.user.id)
+          wx.navigateTo({
+            url: '/pages/dog_new/dog_new'
+          })
           
          
           
