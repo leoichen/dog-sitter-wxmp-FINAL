@@ -31,5 +31,7 @@
   <map id="map" longitude="{{user.longitude}}" latitude="{{user.latitude}}" style="width: 100%; height: 300px;" markers="{{markers}}" wx:if="{{map.hasMarkers}}" wx:if="{{map}}"></map>
   </view>
   </view>
+<block wx:for="{{user.services}}" wx:for-item="item">
+  <view><button class="button" bindtap='onClick'>PICK YOUR {{item.categories}}</button></view>
+</block>
 
-  <view><button class="button" bindtap='onClick'>Pick Me!</button></view>

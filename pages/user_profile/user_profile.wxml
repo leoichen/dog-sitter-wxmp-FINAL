@@ -1,5 +1,5 @@
 <!--pages/user_profile/user_profile.wxml-->
-<view class = "header"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
+<view class = "header-img"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
 <view class = "header">Personal 
 </view>
 <!-- line break? -->
@@ -33,7 +33,7 @@
 <block wx:else>
 <view class= "avatar-holder">   
 <view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
-<text class = "image-text"> Null </text>
+<text class = "image-text"></text>
 </view>
 <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
 </block>

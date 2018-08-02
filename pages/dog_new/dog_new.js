@@ -15,17 +15,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-//     wx.request({
-//       // url:`http://localhost:3000/api/v1/dogs` ,
-//       url: `https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/users/1/dogs
-// `,
-//       method:'POST',
-//       data:dog, 
 
-//       success() {
-
-//       }
-//     })
   },
 
   bindSubmit: function(event) {

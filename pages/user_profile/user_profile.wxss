@@ -8,14 +8,15 @@ button {
   color: white;
   background: #74CFCC;
   font-size:15px;
- margin-top: 15px;
- margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .header {
-  font-size: 32px;
+  font-size: 20px;
   margin-bottom: 7.5px;
-  margin-left: 15px;
+  margin-left:40px;
+  color:#b8bec7;
 /* border: 1px solid black; */
 }
 
@@ -33,10 +34,10 @@ button {
 }
 
 .img-avatar {
- border-radius: 50%;
- height: 150px;
- width: 150px;
- padding-bottom: 5px;
+  border-radius: 50%;
+  height:100px;
+  width:100px;
+  padding-bottom:0px;
 }
 
 .image-text {

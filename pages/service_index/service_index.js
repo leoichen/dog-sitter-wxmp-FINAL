@@ -28,7 +28,8 @@ Page({
   buttonClicked: function () {
     const page = this;
         wx.redirectTo({
-          url: '../service_time/service_time?categories=' + page.data.selectedCategories,
+          // url: '../service_time/service_time?categories=' + page.data.selectedCategories,
+          url: '../user_index/user_index?query=' + page.data.selectedCategories,
         })
     console.log(page.data.selectedCategories)
   },
