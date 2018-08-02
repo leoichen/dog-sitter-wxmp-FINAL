@@ -5,8 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userId: 0
-    
+    userId: 0,
+   
   },
 
   /**
@@ -43,13 +43,10 @@ Page({
     url:`http://localhost:3000/api/v1/users/${userId}`, 
     method: 'GET',
     success(res) {
-          console.log(res.data.dogs)
-          const dogs = res.data.dogs;
-    //     console.log(dog)
-    //     // Update local data
-    //     page.setData(
-    //       dog
-    //     );
+          console.log('dogsss')
+          const user = res.data
+          page.setData(user)
+          // console.log(33, dogs)    
     }
   });
     }

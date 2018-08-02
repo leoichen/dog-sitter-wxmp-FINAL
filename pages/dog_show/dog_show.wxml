@@ -1,15 +1,16 @@
 <!--pages/dog_show/dog_show.wxml-->
 
 
-<image style="width: 100%; height: 100%"  src="../../image/image.jpg"/> 
+   
 
- <image  src='{{dog.image_url }}' mode='aspectFill' class='dog-image'></image> 
+<block wx:for="{{user.dogs}}" wx:for-item="item">
+ <image class="dog-photo" src='{{item.image_url}}' mode='aspectFill' class='dog-image'></image> 
 <view class="dog-info">
-<view class="pet">Name: {{dog.name}}</view> 
-<view class="pet">Breed: {{dog.breed}}</view> 
-<view class="pet">Address: {{dog.address}}</view> 
-<view class="pet">Gender: {{dog.gender}}</view> 
-<view class="pet">Age: {{dog.age}}</view> 
-<view class="pet">Medical_history: {{dog.medical_history}}</view> 
+<view class="pet">Name: {{item.name}}</view> 
+<view class="pet">Breed: {{item.breed}}</view> 
+<view class="pet">Address: {{item.address}}</view> 
+<view class="pet">Gender: {{item.gender}}</view> 
+<view class="pet">Age: {{item.age}}</view> 
+<view class="pet">Medical_history: {{item.medical_history}}</view> 
 </view> 
-
+</block>

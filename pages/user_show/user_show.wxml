@@ -18,12 +18,12 @@
     <view class="user-profile-reviews-rating">Rating: {{item.rating}}</view>
     <view class="user-profile-reviews-content">{{item.content}}</view>
   </block>
-</view>
+</view> 
 <view class="container-map">
   <view class="user-profile-reviews-title">Location</view>
   <view>
-  <map id="map" longitude="121.4365883" latitude="31.2219426"  style="width: 100%; height: 300px;"></map>
+  <map id="map" longitude="{{user.longitude}}" latitude="{{user.latitude}}" markers="{{markers}}" style="width: 100%; height: 300px;"></map>
   </view>
   </view>
-  <view><button class="button" bindtap='onClick'>Pick Me!</button></view>
 
+  <view><button class="button" bindtap='onClick'>Pick Me!</button></view>
