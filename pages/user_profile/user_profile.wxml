@@ -1,5 +1,5 @@
 <!--pages/user_profile/user_profile.wxml-->
-<view class = "header"> Back Arrow </view>
+<view class = "header"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
 <view class = "header">Personal 
 </view>
 <!-- line break? -->
@@ -8,17 +8,32 @@
 <block wx:if="{{user}}" class = "avatar-holder">
 <view class = "avatar-holder">
 <view><image  src='{{user.image_url}}'  mode='aspectFill' class='img-avatar'></image> </view>
-<text> {{user.first_name}}</text>
+<view><image  src='/icons/nav_icons/pencil.png'  mode='aspectFill' class='img-avatar-pencil'></image></view>
+<text  class = "image-text"> {{user.first_name}}</text>
+</view>
+
+<view class = "all-options">
+<view class = "options-order">
+<image  class="options-img" src='/icons/nav_icons/order.png'  mode='aspectFill'></image>
+<text class = "options-text"> My Orders </text>
+</view>
+
+<view class = "options-order">
+<image  class="options-img" src='/icons/nav_icons/font-awesome-paw.png'  mode='aspectFill'></image>
+<text class = "options-text"> My Dogs </text>
+</view>
+
+<view class = "options-order">
+<image  class="options-img" src='/icons/nav_icons/rocket.png'  mode='aspectFill'></image>
+<text class = "options-text"> My Services </text>
+</view>
 </view>
 </block>
 
 <block wx:else>
 <view class= "avatar-holder">   
 <view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
-<text> Null </text>
+<text class = "image-text"> Null </text>
 </view>
-</block>
-
-<!-- <view>{{user}}</view> -->
-
 <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+</block>
