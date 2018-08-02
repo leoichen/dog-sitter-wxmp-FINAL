@@ -5,8 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    categories: '',
-  
+    users: ''
   },
 
   /**
@@ -14,24 +13,25 @@ Page({
    */
   onLoad: function (options) {
     const page = this;
+    this.setData({
+      categories: options.query
+    })
     wx.request({
       url: 'https://dog-sitter-woof.herokuapp.com/api/v1/users?query=' + options.query,
       method: 'GET',
       success: function (res) {
-        // console.log(res.data)
-        // console.log(21, res.data.users)
         const users = res.data;
         page.setData(users)
         console.log(users)
-      }
+      },
     })
-
-    this.setData({
-      categories: options.categories
-    })
-   
   },
-
+  onClick: function (event) {
+    const page = this;
+    wx.navigateTo({
+      url: '../user_show/user_show?id=' + event.currentTarget.dataset.id
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -66,12 +66,7 @@ Page({
   onPullDownRefresh: function () {
   
   },
-  onClick: function (event) {
-    let id = event.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: `/pages/user_show/user_show?id=${id}`
-    })
-  },
+  
   /**
    * 页面上拉触底事件的处理函数
    */
