@@ -68,10 +68,9 @@ Page({
           price: price
         })
       }
-    }),
+    })
 
     const sitterId = options.id;
-    const page = this;
       wx.getStorage({
         key: 'user_id',
         success: function (res) {

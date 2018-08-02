@@ -11,7 +11,8 @@
     "pages/user_show/user_show",
     "pages/service_request/service_request",
     "pages/service_acceptance_await/service_acceptance_await",
-    "pages/service_acceptance/service_acceptance"
+    "pages/service_acceptance/service_acceptance",
+    "pages/my_order/my_order"
   ],
   "window":{
     "backgroundTextStyle":"light",
