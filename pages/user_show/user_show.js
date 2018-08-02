@@ -18,14 +18,15 @@ Page({
     autoplay: true,
     interval: 10000,
     duration: 5000,
-    markers: [{
-      iconPath: "/icons/shared_icons/marker.png",
-      id: 0,
-      latitude: 0,
-      longitude:0,
-      width: 50,
-      height: 50
-    }],
+    // markers: [{
+    //   iconPath: "/icons/shared_icons/marker.png",
+    //   // iconPath: "icons/nav_icons/pencil.png",
+    //   // id: 1,
+    //   // latitude: 0,
+    //   // longitude: 0,
+    //   width: 50,
+    //   height: 50,
+    // }],
     circles: [{
       latitude: 31.2219426,
       longitude: 121.4365883,
@@ -85,18 +86,33 @@ Page({
               const user = res.data.user;
               const longitude = res.data.user.longitude;
               const latitude = res.data.user.latitude;
-              console.log(55,longitude);
+              console.log(55,typeof longitude);
               console.log(56, typeof user);
               page.setData({
-                'user':user,
-                'markers.longitude': longitude,
-                'markers.latitude': latitude
+                'user': user,
+                'user.longitude': longitude,
+                'user.latitude': latitude,
+                // 'map.markers.longitude': 121.4365883,
+                // 'map.markers.latitude': 31.2219426,
+                // 'markers.longtiude': longitude,
+                // 'markers.latitude': latitude,
+                'map.hasMarkers': true,
+               'markers': [{
+                  iconPath: "/icons/shared_icons/marker.png",
+                  // iconPath: "icons/nav_icons/pencil.png",
+                  // id: 1,
+                  latitude: latitude,
+                  longitude: longitude,
+                  width: 50,
+                  height: 50,
+                }]
                 });
             }
           });
         }
     });
   },
+  
   onClick: function (e) {
     const page = this;
     wx.navigateTo({
