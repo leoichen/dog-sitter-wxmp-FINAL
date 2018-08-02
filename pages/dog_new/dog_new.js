@@ -29,30 +29,34 @@ Page({
   },
 
   bindSubmit: function(event) {
-    console.log(event)
+    let page = this;
     const newDog = event.detail.value;
     wx.getStorage({
       key: 'user_id',
       success: function (res) {
-        console.log(res)
-        newDog.user_id = res
-      }
-    }) 
-    newDog.image_url = this.data.dog_image;
-    
-    wx.request({
-     // url: "https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/users/1/dogs",
-     url:"http://localhost:3000/api/v1/dogs",
-      method:'POST',
-      data: {dog: newDog},
-      success: function (res) {
-        console.log(res) 
-        wx.redirectTo({
-          url: '/pages/dog_show/dog_show?id=' + res.data.dog.id
+        console.log("userlala")
+        console.log(res.data)
+        const userId = res.data
+        newDog.user_id = userId 
+        newDog.image_url = page.data.dog_image;
+        console.log(3,newDog)
+        wx.request({
+          url: `http://localhost:3000/api/v1/dogs`,
+          method:'POST',
+          data:{
+            user_id: userId,
+            dog:newDog
+          },
+          success:function(res) {
+            wx.navigateTo({
+            url: '/pages/dog_show/dog_show'
+  })
+          }
         })
       }
-    })
-  }, 
+    }) 
+  },
+
 
   takePhoto: function () {
     let that = this
