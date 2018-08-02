@@ -3,6 +3,8 @@
 const app = getApp();
 
 Page({
+  
+  
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo;
@@ -17,16 +19,24 @@ Page({
 
     this.setData({
       userInfo: e.detail.userInfo
-    }),
-
+    })
+      
+      let page = this;
       wx.request({
-        url: 'http://localhost:3000/api/v1/users',
+        url: 'http://localhost:3000/api/v1/users/',
         method: 'POST',
         data: {
           user: newUser
         },
         success: function (res) {
-          console.log(res);
+          console.log("user");
+          console.log(res.data.user);
+
+          wx.setStorageSync('user_id', res.data.user.id)
+          
+          // Set Globaldata
+         // app.globalData.user_id = res.data.user.id
+          
         }
     })
   },
@@ -34,13 +44,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    user_id:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+  
   },
 
   /**

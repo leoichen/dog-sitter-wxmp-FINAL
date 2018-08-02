@@ -1,4 +1,4 @@
-
+var app = getApp()
 Page({
 
   /**
@@ -11,29 +11,33 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    let page = this;
-  console.log(options)
+  
+  onLoad: function () {
+    let page = this
+    
+    //console.log(app.globalData);
+  
     // Get api data
-    wx.request({
-      url: `http://localhost:3000/api/v1/dogs/${options.id}`,
-      method: 'GET',
-      success(res) {
-        const dog = res.data;
-        console.log(dog)
-        // Update local data
-        page.setData(
-          dog
-        );
+    // wx.request({
+    //   url: `http://localhost:3000/api/v1/dogs/${options.id}`,
+    //   method: 'GET',
+    //   success(res) {
+    //     const dog = res.data;
+    //     console.log(dog)
+    //     // Update local data
+    //     page.setData(
+    //       dog
+    //     );
 
-        wx.hideToast();
-      }
-    });
+    //     wx.hideToast();
+    //   }
+    // });
   },
   
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  
   onReady: function () {
   
   },
