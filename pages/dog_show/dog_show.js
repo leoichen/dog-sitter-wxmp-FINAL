@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    userId: 0
     
   },
 
@@ -32,11 +33,37 @@ Page({
     //     wx.hideToast();
     //   }
     // });
+    wx.getStorage({
+    key: 'user_id',
+    success: function (res) {
+      console.log("useridblabla")
+      console.log(res.data)
+      const userId = res.data
+      wx.request({
+    url:`http://localhost:3000/api/v1/users/${userId}`, 
+    method: 'GET',
+    success(res) {
+          console.log(res.data.dogs)
+          const dogs = res.data.dogs;
+    //     console.log(dog)
+    //     // Update local data
+    //     page.setData(
+    //       dog
+    //     );
+    }
+  });
+    }
+  })
+
+
   },
   
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  
+  
+  
   
   onReady: function () {
   
