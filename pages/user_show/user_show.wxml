@@ -14,11 +14,19 @@
 </view>
 <view class="user-profile-reviews">
   <view class="user-profile-reviews-title">Reviews</view>
-  <block wx:for="{{reviews}}">
+  <block wx:for="{{reviews}}" wx:key="{{item}}">
     <view class="user-profile-reviews-rating">Rating: {{item.rating}}</view>
     <view class="user-profile-reviews-content">{{item.content}}</view>
   </block>
 </view>
-<view><button class="button" bindtap='onClick'>Pick Me!</button></view>
+<view class="container-map">
+  <view class="user-profile-reviews-title">Location</view>
+  <view>
+  <map longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 300px;" markers="{{mk}}"></map>
 
+  <map id="map" longitude="{{markers.longitude}}" latitude="{{markers.latitude}}"  style="width: 100%; height: 300px;"></map>
+  </view>
+  <view>{{data.longtitude}} </view>
+  </view>
+  <view><button class="button" bindtap='onClick'>Pick Me!</button></view>
 

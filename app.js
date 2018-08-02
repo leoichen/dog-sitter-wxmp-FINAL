@@ -19,7 +19,7 @@ App({
             code: res.code
           },
           success: (res) => {
-            console.log(res)
+            // console.log(res)
             this.globalData.userId = res.data.userId;
           }
         })
