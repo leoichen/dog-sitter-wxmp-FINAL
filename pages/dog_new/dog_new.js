@@ -30,7 +30,14 @@ Page({
 
   bindSubmit: function(event) {
     console.log(event)
-    const newDog = event.detail.value; 
+    const newDog = event.detail.value;
+    wx.getStorage({
+      key: 'user_id',
+      success: function (res) {
+        console.log(res)
+        newDog.user_id = res
+      }
+    }) 
     newDog.image_url = this.data.dog_image;
     
     wx.request({
