@@ -135,10 +135,17 @@
 					"id": -1,
 					"name": "user profile",
 					"pathName": "pages/user_profile/user_profile",
+
+          "query":""
+        },
+        {
+          "id": -1,
+
 					"query": ""
 				},
 				{
 					"id": -1,
+
 					"name": "user show",
 					"pathName": "pages/user_show/user_show",
 					"query": ""

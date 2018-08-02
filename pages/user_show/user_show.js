@@ -12,6 +12,7 @@ Page({
     id: '',
     price: '',
     mode: "scaleToFill",
+    user: [{}],
     arr: ["https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60"],
     indicatorDots: true,
     autoplay: true,
@@ -21,22 +22,18 @@ Page({
       iconPath: "/icons/shared_icons/marker.png",
       id: 0,
       latitude: 0,
-      longitude: 0,
+      longitude:0,
       width: 50,
       height: 50
     }],
     circles: [{
-      latitude: 0,
-      longitude: 0,
+      latitude: 31.2219426,
+      longitude: 121.4365883,
       radius: 150,
       fillColor: "#00000015",
       color: "#74CFCC",
       strokeWidth: 2
-    }],
-    lt: "12.134534",
-    lg: "33.13245",
-    sc: '16',
-    mk: []
+    }]
   },
 
   /**
@@ -68,7 +65,11 @@ Page({
           price: price
         })
       }
-    })
+
+    });
+
+    
+
 
     const sitterId = options.id;
       wx.getStorage({
@@ -76,19 +77,25 @@ Page({
         success: function (res) {
           const userId = res.data
           wx.request({
-            url: `http://localhost:3000/api/v1/users/${sitterId}`,
+           // url: `http://localhost:3000/api/v1/users/${sitterId}`,         
+            url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${sitterId}`,
             method: 'GET',
             success(res) {
-              // console.log("res", res)
+              console.log("res", res)
+              const user = res.data.user;
               const longitude = res.data.user.longitude;
               const latitude = res.data.user.latitude;
-              page.setData("data.markers.latitude", latitude);
-              page.setData("data.markers.longitude", longitude);
+              console.log(55,longitude);
+              console.log(56, typeof user);
+              page.setData({
+                'user':user,
+                'markers.longitude': longitude,
+                'markers.latitude': latitude
+                });
             }
           });
         }
     });
-    console.log("onLoad markers", this.data.markers)
   },
   onClick: function (e) {
     const page = this;
