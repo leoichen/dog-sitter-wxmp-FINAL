@@ -29,6 +29,7 @@ Page({
           user: newUser
         },
         success: function (res) {
+          console.log(res)
           console.log("user");
           console.log(res.data.user);
 
