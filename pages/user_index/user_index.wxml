@@ -4,7 +4,7 @@
 <view class="card-container">
   <block wx:for="{{users}}" wx:for-item="item">
     <view class="user-card" bindtap = "onClick" data-id= "{{item.id}}">
-      <view class="user-card-image" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+      <view class="user-card-image" style="background-image: url('https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b0303fc2b63c761cca164d1a1330b58&auto=format&fit=crop&w=500&q=60');"></view>
       <view class="user-card-content">
         <view class="user-name">{{item.first_name}} {{item.last_name}}</view>
         <view class="user-address">{{item.address}}</view>

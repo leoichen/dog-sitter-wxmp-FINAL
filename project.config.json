@@ -24,12 +24,16 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": 12,
+			"current": 15,
 			"list": [
 				{
 					"id": -1,
@@ -83,8 +87,8 @@
 					"id": -1,
 					"name": "time",
 					"pathName": "pages/service_time/service_time",
-				"query": ""
-        },
+					"query": ""
+				},
 				{
 					"id": -1,
 					"name": "user_show",
@@ -95,7 +99,7 @@
 					"id": -1,
 					"name": "service_request",
 					"pathName": "pages/service_request/service_request",
-          "query": ""
+					"query": ""
 				},
 				{
 					"id": -1,
@@ -106,8 +110,25 @@
 				{
 					"id": -1,
 					"name": "service_acceptance",
-					"pathName": "pages/service_acceptance/service_acceptance"，
-          "query": ""
+					"pathName": "pages/service_acceptance/service_acceptance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dog new",
+					"pathName": "pages/dog_new/dog_new",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dog new",
+					"pathName": "pages/service_acceptance/service_acceptance",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user show",
+					"pathName": "pages/user_show/user_show"
 				}
 			]
 		}

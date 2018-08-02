@@ -1,5 +1,5 @@
 <!--pages/user_show/user_show.wxml-->
-<view class="user-profile-image" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+<view class="user-profile-image" style="background-image: url('https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b0303fc2b63c761cca164d1a1330b58&auto=format&fit=crop&w=500&q=60');"></view>
 <!-- <view class="user-profile-image">
   <swiper indicator-dots="{{indicatorDots}}" 
           autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true"> 
