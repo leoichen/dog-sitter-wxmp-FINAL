@@ -7,6 +7,24 @@ Page({
   data: {
     categories: ''
   },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+    this.setData({
+      categories: options.categories
+    })
+  },
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  buttonClickedNext: function (e) {
+    const page = this;
+    wx.navigateTo({
+      url: '../user_index/user_index?query=' + page.data.categories,
+    })
+    console.log(page.data.categories)
+  },
   bindDateChangeStart: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -19,29 +37,11 @@ Page({
       date2: e.detail.value
     })
   },
-  buttonClickedBack: function(e) {
+  buttonClickedBack: function (e) {
     wx.navigateTo({
       url: '../service_index/service_index',
     })
   },
-  buttonClickedNext: function(e) {
-    const page = this;
-    wx.navigateTo({
-      url: '../user_index/user_index?query=' + page.data.categories,
-    })
-  },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    this.setData({
-      categories: options.categories
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
   onReady: function () {
   
   },

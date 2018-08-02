@@ -5,30 +5,48 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    first_name: '',
+    last_name: '',
+    address: '',
+    bio: '',
+    id: '',
+    categories: '',
+    price: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options)
     const page = this;
     const id = options.id;
     wx.request({
-      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/user/1',
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${id}`,
       method: 'GET',
       success: function (res) {
-        // console.log(res.data.data.user)
-        const user = res.data.data.user;
-        page.setData(user)
+        const first_name = res.data.user.first_name;
+        const last_name = res.data.user.last_name;
+        const language = res.data.user.language;
+        const address = res.data.user.address;
+        const bio = res.data.user.bio;
+        const image_url = res.data.user.image_url
+        const price = res.data.user.price
+        const categories = res.data.user.services[0].categories
+        // const categories = res.data.user.services.categories
+        // price is not in heroku for now
+        // console.log(res.data.user)
+        page.setData({
+          id: options.id,
+          first_name: first_name,
+          last_name: last_name,
+          address: address,
+          bio: bio,
+          image_url: image_url,
+          categories: categories,
+          price: price
+        })
       }
     });
-    var array = this.data.arr
-    for (let i = 1; i < 1; i++) {
-      array.push("img/" + i + ".jpg")
-    }
-    this.setData({ arr: array })
   },
 
   /**

@@ -121,6 +121,7 @@
 .total-price-title {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
+  margin-left:11px;
 }
 
 .request-btn {

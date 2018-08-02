@@ -17,17 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  //   const page = this;
-  // wx.request({
-  //   url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/services',
-  //   method: 'GET',
-  //   success: function(res) {
-  //     console.log(res)
-  //     const services = res.data.data;
-  //     console.log(services)
-  //     page.setData(services)
-  //   }
-  // })
+    
   },
   radioChange: function (e) {
     console.log(e.detail.value)
@@ -36,22 +26,11 @@ Page({
     });
   },
   buttonClicked: function () {
-    let page = this;
-    // wx.request({
-    //   url: 'http://localhost:3000/api/v1/services',
-    //   method: 'GET',
-    //   data: {
-    //     categories: page.data.selectedCategories
-    //   },
-    //   success: function(res) {
-    //     console.log(res.data);
-    //     console.log(res.data.services.map((item) => item.user_id));
+    const page = this;
         wx.redirectTo({
-          // url: '../user_index/user_index?user_ids=' + res.data.services.map((item) => item.user_id),
           url: '../service_time/service_time?categories=' + page.data.selectedCategories,
         })
-      // }
-    // })
+    console.log(page.data.selectedCategories)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
