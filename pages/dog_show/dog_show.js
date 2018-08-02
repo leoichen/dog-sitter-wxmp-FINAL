@@ -6,7 +6,7 @@ Page({
    */
   data: {
     userId: 0,
-   
+    user:[]
   },
 
   /**
@@ -33,7 +33,13 @@ Page({
           const user = res.data
           page.setData(user)
           // console.log(33, dogs)    
-
+        url:`https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`, 
+    method: 'GET',
+    success(res) {
+          console.log('dogsss') 
+          console.log(res.data.user)
+          const user = res.data.user
+          page.setData({user: user})
     }
   });
     }

@@ -7,6 +7,14 @@ Page({
   data: {
     user: []
   },
+  
+  optionDog:function(e) {
+      wx.redirectTo({
+        url: '/pages/dog_show/dog_show',
+      })
+  },
+  
+  
   getUserInfo: function (e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo;
@@ -39,10 +47,9 @@ Page({
             'user': res.data.user
           })
           wx.setStorageSync('user_id', res.data.user.id)
-          wx.navigateTo({
-            url: '/pages/dog_new/dog_new'
-          })
-          
+          //  wx.redirectTo({
+          //    url: '/pages/dog_new/dog_new',
+          //  })
          
           
         }

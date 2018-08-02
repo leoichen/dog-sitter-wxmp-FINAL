@@ -11,7 +11,22 @@ Page({
     bio: '',
     serviceid: '',
     price: '',
-    user: []
+    user: [],
+    mode: "scaleToFill",
+    user: [{}],
+    arr: ["https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60", "https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=1cf9c13e09f5f2ec5139b6475751b310&auto=format&fit=crop&w=800&q=60"],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 10000,
+    duration: 5000,
+    circles: [{
+      latitude: 31.2219426,
+      longitude: 121.4365883,
+      radius: 150,
+      fillColor: "#00000015",
+      color: "#74CFCC",
+      strokeWidth: 2
+    }]
   },
 
   /**
@@ -45,11 +60,49 @@ Page({
           user: user,
           serviceid: serviceid
         })
-        console.log()
-      },
-    })
     },
-   
+
+    const sitterId = options.id;
+      wx.getStorage({
+        key: 'user_id',
+        success: function (res) {
+          const userId = res.data
+          wx.request({
+           // url: `http://localhost:3000/api/v1/users/${sitterId}`,         
+            url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${sitterId}`,
+            method: 'GET',
+            success(res) {
+              console.log("res", res)
+              const user = res.data.user;
+              const longitude = res.data.user.longitude;
+              const latitude = res.data.user.latitude;
+              console.log(55,typeof longitude);
+              console.log(56, typeof user);
+              page.setData({
+                'user': user,
+                'user.longitude': longitude,
+                'user.latitude': latitude,
+                // 'map.markers.longitude': 121.4365883,
+                // 'map.markers.latitude': 31.2219426,
+                // 'markers.longtiude': longitude,
+                // 'markers.latitude': latitude,
+                'map.hasMarkers': true,
+               'markers': [{
+                  iconPath: "/icons/shared_icons/marker.png",
+                  // iconPath: "icons/nav_icons/pencil.png",
+                  // id: 1,
+                  latitude: latitude,
+                  longitude: longitude,
+                  width: 50,
+                  height: 50,
+                }]
+                });
+            }
+          });
+        }
+    });
+  },
+
   onClick: function (e) {
     const page = this;
     wx.navigateTo({

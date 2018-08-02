@@ -13,17 +13,17 @@
 </view>
 
 <view class = "all-options">
-<view class = "options-order">
+<view class = "options-order" bindtap="optionOrder">
 <image  class="options-img" src='/icons/nav_icons/order.png'  mode='aspectFill'></image>
 <text class = "options-text"> My Orders </text>
 </view>
 
-<view class = "options-order">
+<view class = "options-order" bindtap="optionDog">
 <image  class="options-img" src='/icons/nav_icons/font-awesome-paw.png'  mode='aspectFill'></image>
 <text class = "options-text"> My Dogs </text>
 </view>
 
-<view class = "options-order">
+<view class = "options-order" bindtap="optionService">
 <image  class="options-img" src='/icons/nav_icons/rocket.png'  mode='aspectFill'></image>
 <text class = "options-text"> My Services </text>
 </view>
