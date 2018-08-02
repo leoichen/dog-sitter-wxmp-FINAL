@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    categories: '',
+  
   },
 
   /**
@@ -23,13 +25,11 @@ Page({
         console.log(users)
       }
     })
-    // wx.request({
-    //   url: 'http://localhost:3000/api/v1/services',
-    //   method: 'GET',
-    //   success(res) {
-    //     const services = res.data.services
-    //   }
-    // })
+
+    this.setData({
+      categories: options.categories
+    })
+   
   },
 
   /**

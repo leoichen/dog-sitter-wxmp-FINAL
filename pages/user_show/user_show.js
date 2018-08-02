@@ -11,6 +11,22 @@ Page({
     autoplay: true,
     interval: 10000,
     duration: 5000,
+    markers: [{
+      iconPath: "/icons/shared_icons/marker.png",
+      id: 0,
+      latitude: 23.099994,
+      longitude: 113.324520,
+      width: 50,
+      height: 50
+    }],
+    circles: [{
+      latitude: 23.099994,
+      longitude: 113.324520,
+      radius: 150,
+      fillColor: "#00000015",
+      color: "#74CFCC",
+      strokeWidth: 2
+    }]
   },
 
   /**

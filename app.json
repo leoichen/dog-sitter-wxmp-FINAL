@@ -27,14 +27,14 @@
     "list": [
       {
         "pagePath": "pages/main/main",
-        "iconPath": "nav_images/font-awesome-paw.png",
-        "selectedIconPath": "nav_images/font-awesome-paw.png",
+        "iconPath": "icons/nav_icons/font-awesome-paw.png",
+        "selectedIconPath": "icons/nav_icons/font-awesome-paw.png",
         "text": "Home"
       },
       {
         "pagePath": "pages/user_profile/user_profile",
-        "iconPath": "nav_images/font-awesome-user.png",
-        "selectedIconPath": "nav_images/font-awesome-user.png",
+        "iconPath": "icons/nav_icons/font-awesome-user.png",
+        "selectedIconPath": "icons/nav_icons/font-awesome-user.png",
         "text": "My profile"
       }
     ]

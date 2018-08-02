@@ -3,6 +3,7 @@
 </view>
 <view class="service-container">
   <view class='h2'>When will you need the serivce?</view>
+  <view>{{categories}}</view>
   <view class="section">
     <picker mode="date" value="{{date}}" start="2018-07-01" end="2020-09-01" bindchange="bindDateChangeStart">
       <view class="picker">

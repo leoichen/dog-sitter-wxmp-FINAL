@@ -1,5 +1,5 @@
 <!--pages/user_index/user_index.wxml-->
-<view class="find-sitter-header">Find Your Dog Boarder</view>
+<view class="find-sitter-header">Find Your {{categories}}</view>
 
 <view class="card-container">
   <block wx:for="{{users}}" wx:for-item="item">
@@ -13,4 +13,5 @@
       <view class="user-price">¥{{item.price}}</view>
     </view>
   </block>
+
 </view>
