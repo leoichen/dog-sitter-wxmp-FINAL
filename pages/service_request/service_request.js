@@ -24,6 +24,7 @@ Page({
       url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${id}`,
       method: 'GET',
       success: function (res) {
+        console.log(33, res)
         const first_name = res.data.user.first_name;
         const last_name = res.data.user.last_name;
         const language = res.data.user.language;

@@ -15,24 +15,6 @@ Page({
   
   onLoad: function () {
     let page = this
-    
-    //console.log(app.globalData);
-  
-    // Get api data
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/dogs/${options.id}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const dog = res.data;
-    //     console.log(dog)
-    //     // Update local data
-    //     page.setData(
-    //       dog
-    //     );
-
-    //     wx.hideToast();
-    //   }
-    // });
     wx.getStorage({
     key: 'user_id',
     success: function (res) {
@@ -40,22 +22,15 @@ Page({
       console.log(res.data)
       const userId = res.data
       wx.request({
-    url:`http://localhost:3000/api/v1/users/${userId}`, 
+        url:`https://dog-sitter-woof.herokuapp.com/api/v1/users${userId}`, 
     method: 'GET',
     success(res) {
           console.log(res.data.dogs)
           const dogs = res.data.dogs;
-    //     console.log(dog)
-    //     // Update local data
-    //     page.setData(
-    //       dog
-    //     );
     }
   });
     }
   })
-
-
   },
   
   /**
