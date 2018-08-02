@@ -14,52 +14,50 @@ Page({
     markers: [{
       iconPath: "/icons/shared_icons/marker.png",
       id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 0,
+      longitude: 0,
       width: 50,
       height: 50
     }],
     circles: [{
-      latitude: 23.099994,
-      longitude: 113.324520,
+      latitude: 0,
+      longitude: 0,
       radius: 150,
       fillColor: "#00000015",
       color: "#74CFCC",
       strokeWidth: 2
-    }]
+    }],
+    lt: "12.134534",
+    lg: "33.13245",
+    sc: '16',
+    mk: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // console.log(options)
-    const page = this;
-    const id = options.id;
-    wx.request({
-      url:    'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/user/1',
-      method: 'GET',
-      success: function(res) {
-        // console.log(res.data.data.user)
-        const user = res.data.data.user;
-        page.setData(user)
-      }
-    });
 
-    wx.request({
-      url: 'https://easy-mock.com/mock/5b5fda719581b5586d6a6a37/dog-sitter/services/1/bookings/1',
-      method: 'GET',
-      success: function (res) {
-        console.log(res.data.data.booking)
-        const booking = res.data.data.booking;
-        page.setData(booking)
-      }
-    })
-    var array = this.data.arr
-    for (let i = 1; i < 1; i++) {
-      array.push("img/" + i + ".jpg")
-    }
-    this.setData({ arr: array })
+    const sitterId = options.id;
+    const page = this;
+      wx.getStorage({
+        key: 'user_id',
+        success: function (res) {
+          const userId = res.data
+          wx.request({
+            url: `http://localhost:3000/api/v1/users/${sitterId}`,
+            method: 'GET',
+            success(res) {
+              // console.log("res", res)
+              const longitude = res.data.user.longitude;
+              const latitude = res.data.user.latitude;
+              page.setData("data.markers.latitude", latitude);
+              page.setData("data.markers.longitude", longitude);
+            }
+          });
+        }
+    });
+    console.log("onLoad markers", this.data.markers)
   },
 
   buttonClickedConfirm: function (event) {
@@ -71,14 +69,14 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    // console.log("onReady markers", this.data.markers)
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // console.log("onShow markers", this.data.markers)
   },
 
   /**
