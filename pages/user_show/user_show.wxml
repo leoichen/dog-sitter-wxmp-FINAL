@@ -22,7 +22,13 @@
 <view class="container-map">
   <view class="user-profile-reviews-title">Location</view>
   <view>
-  <map id="map" longitude="{{user.longitude}}" latitude="{{user.latitude}}" markers="{{markers}}" style="width: 100%; height: 300px;"></map>
+
+  <!-- {{markers}}
+  {{user.latitude}}
+  {{user.longitude}}
+  {{markers.latitude}} -->
+  {{map.markers.longitude}}
+  <map id="map" longitude="{{user.longitude}}" latitude="{{user.latitude}}" style="width: 100%; height: 300px;" markers="{{markers}}" wx:if="{{map.hasMarkers}}" wx:if="{{map}}"></map>
   </view>
   </view>
 
