@@ -10,3 +10,23 @@ button {
   font-size:15px;
   margin-top:369px;
 }
+
+.header {
+  font-size: 32px;
+  margin-bottom: 7.5px;
+  margin-left: 15px;
+/* border: 1px solid black; */
+}
+
+.avatar-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.img-avatar {
+ border-radius: 50%;
+ height: 150px;
+ width: 150px;
+}
