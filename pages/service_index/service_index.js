@@ -7,8 +7,8 @@ Page({
   data: {
     selectedCategories: 'Dog Sitter',
     items: [
-      { name: 'Dog Sitter', value: 'Dog Sitter' },
-      { name: 'Dog Walker', value: 'Dog Walker', checked: 'true' },
+      { name: 'Dog Sitter', value: 'Dog Sitter', checked: 'true' },
+      { name: 'Dog Walker', value: 'Dog Walker' },
       { name: 'Dog Boarder', value: 'Dog Boarder' }
     ]
   },
@@ -37,31 +37,21 @@ Page({
   },
   buttonClicked: function () {
     let page = this;
-    wx.request({
-      url: 'http://localhost:3000/api/v1/services',
-      method: 'GET',
-      data: {
-        categories: page.data.selectedCategories
-      },
-      success: function(res) {
-        console.log(res.data);
-        console.log(res.data.services.map((item) => item.user_id));
+    // wx.request({
+    //   url: 'http://localhost:3000/api/v1/services',
+    //   method: 'GET',
+    //   data: {
+    //     categories: page.data.selectedCategories
+    //   },
+    //   success: function(res) {
+    //     console.log(res.data);
+    //     console.log(res.data.services.map((item) => item.user_id));
         wx.redirectTo({
           // url: '../user_index/user_index?user_ids=' + res.data.services.map((item) => item.user_id),
           url: '../service_time/service_time?categories=' + page.data.selectedCategories,
         })
-      }
-    })
-  },
-  buttonClicked: function (event) {
-    wx.redirectTo({
-      url: '/pages/service_time/service_time',
-    })
-  },
-  buttonClicked: function (event) {
-    wx.redirectTo({
-      url: '/pages/service_time/service_time',
-    })
+      // }
+    // })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

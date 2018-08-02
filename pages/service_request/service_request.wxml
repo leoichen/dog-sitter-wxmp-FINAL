@@ -7,15 +7,15 @@
       <view class="owner-address">159 Nanjing Xi Lu, Jing'an District, Shanghai</view>
     </view>
   
-  </view>
+</view>
   
 
 
   <view class="bar-request-content">
-    <view class="sitter-avatar" style="background-image: url('/images/girl-with-dog.jpeg');"></view>
+    <view class="sitter-avatar" style="background-image: url('https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b0303fc2b63c761cca164d1a1330b58&auto=format&fit=crop&w=500&q=60');"></view>
     <view class="request-info">
-      <view class="sitter-name">{{first_name}} {{last_name}}</view>
-      <view class="request-service">Dog Sitting</view>
+      <view class="sitter-name">Domingo</view>
+      <view class="request-service">Dog Boarding</view>
       <view class="request-time">Aug 5 2018 to Aug 8 2018</view>
     </view>
   </view>

@@ -1,6 +1,6 @@
 /* pages/user_show/user_show.wxss */
 .user-profile-image {
-  height: 600rpx;
+  height:761rpx;
   width: 100%;
   background-size: cover !important;
 }
