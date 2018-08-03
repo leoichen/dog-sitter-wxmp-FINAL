@@ -54,7 +54,7 @@ Page({
   },
 
   onClickAdd: function(e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/dog_new/dog_new',
     })
   },
