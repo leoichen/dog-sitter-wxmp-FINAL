@@ -25,7 +25,8 @@ Page({
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo;
     const newUserInfo = e.detail.userInfo;
-    console.log(typeof newUserInfo.avatarUrl)
+    console.log(24, e.detail.userInfo)
+    // console.log(typeof newUserInfo.avatarUrl)
     const newUser = {
       first_name: newUserInfo.nickName,
       address: newUserInfo.city,

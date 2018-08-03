@@ -9,6 +9,7 @@
     "pages/service_time/service_time",
     "pages/user_index/user_index",
     "pages/user_show/user_show",
+    "pages/user_manager/user_manager",
     "pages/service_request/service_request",
     "pages/service_acceptance_await/service_acceptance_await",
     "pages/service_acceptance/service_acceptance",
