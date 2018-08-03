@@ -16,5 +16,9 @@ padding:10px;
 .pet {
   margin-bottom:8px;
 }
-
-
+.header-img {
+  height: 20px;
+  width: 20px;
+  margin-bottom: 20px;
+  margin-left:20px;
+}

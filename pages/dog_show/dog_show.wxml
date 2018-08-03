@@ -2,6 +2,7 @@
 
 
    
+<view  bindtap="leftArrow"> <image src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
 
 <block wx:for="{{user.dogs}}" wx:for-item="item">
  <image class="dog-photo" src='{{item.image_url}}' mode='aspectFill' class='dog-image'></image> 
