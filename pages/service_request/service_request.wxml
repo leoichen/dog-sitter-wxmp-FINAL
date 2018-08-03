@@ -32,7 +32,7 @@
 <view class="bar-confirm">
   <view class="total-price">
     <view class="total-price-title">Total Fee: </view>
-    <view class="price">¥ {{price}}.00</view>
+    <view class="price">¥ {{sitter.price}}.00</view>
   </view>
   <view class="request-btn" form-type="submit" bindtap='buttonClickedConfirm'>Request</view>
   </view>

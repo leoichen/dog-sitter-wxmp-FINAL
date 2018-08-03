@@ -41,6 +41,11 @@ Page({
       url: '/pages/dog_new/dog_new',
     })
   },
+  clicktap: function () {
+    wx.navigateTo({
+      url: '../service_request/service_request'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
