@@ -52,6 +52,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   buttonClickedNext: function (e) {
+     wx.navigateTo({
+       url: '/pages/dog_show/dog_show',
+       success: function(res) {},
+       fail: function(res) {},
+       complete: function(res) {},
+     })
     const pageData= this.data;
     const date1 = new Date(pageData.date1);
     const date2 = new Date(pageData.date2);

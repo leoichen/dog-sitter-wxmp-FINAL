@@ -8,7 +8,7 @@
 </view>
 
 
-
+<view bindtap="clicktap">
 <block wx:for="{{user.dogs}}" wx:for-item="item">
  <view class="dog-image">
  <image class="dog-photo" src='{{item.image_url}}' mode='aspectFill' class='dog-image'></image>  
@@ -22,3 +22,4 @@
 <view class="pet">Medical_history: {{item.medical_history}}</view> 
 </view> 
 </block>
+</view>
