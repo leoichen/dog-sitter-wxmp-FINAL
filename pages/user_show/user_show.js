@@ -85,6 +85,7 @@ Page({
   },
   
   onClick: function (e) {
+    const page = this;
     wx.setStorageSync('sitter_id', page.data.sitter.id);
     console.log('sitter',page.data.sitter.id)
     //console.log(22, page);

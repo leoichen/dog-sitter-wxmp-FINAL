@@ -11,7 +11,8 @@ Page({
     bio: '',
     id: '',
     categories: '',
-    price: ''
+    price: '',
+    'user': []
   },
 
   /**
@@ -20,6 +21,17 @@ Page({
   onLoad: function (options) {
     const page = this;
     const id = options.id;
+    const userId = wx.getStorageSync('user_id');
+    wx.request({
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`,
+      method: 'GET',
+      success: function (res) {
+        const currentUser = res.data.user;
+        page.setData({
+          'user': currentUser
+        })
+      }
+    })
     wx.request({
       url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${id}`,
       method: 'GET',
@@ -43,7 +55,8 @@ Page({
           bio: bio,
           image_url: image_url,
           categories: categories,
-          price: price
+          price: price,
+          
         })
       }
     });
