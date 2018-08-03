@@ -89,7 +89,7 @@ Page({
                 'circles': [{
                   latitude: latitude,
                   longitude: longitude,
-                  radius: 150,
+                  radius: 300,
                   fillColor: "#00000015",
                   color: "#74CFCC",
                   strokeWidth: 2
