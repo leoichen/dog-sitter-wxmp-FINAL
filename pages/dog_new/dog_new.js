@@ -38,6 +38,7 @@ Page({
             dog:newDog
           },
           success:function(res) {
+            console.log(23, res)
   //           wx.navigateTo({
   //           url: '/pages/dog_show/dog_show'
   // })
