@@ -1,4 +1,4 @@
-// pages/become_sitter/become_sitter.js
+// pages/accept_sitter/accept_sitter.js
 Page({
 
   /**
@@ -8,15 +8,14 @@ Page({
   
   },
 
-  onClickSubmit: function (event) {
-    wx.showToast({
-      title: 'Accepted',
-      duration: 2000
-    })
-    wx.redirectTo({
-      url: '/pages/accept_sitter/accept_sitter',
-    })({
+  onClickHome: function(e) {
+    wx.reLaunch({
       url: '/pages/main/main',
+    })
+  },
+  onClickProfile: function (e) {
+    wx.reLaunch({
+      url: '/pages/user_profile/user_profile',
     })
   },
   /**

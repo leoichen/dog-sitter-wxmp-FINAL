@@ -83,12 +83,8 @@ Page({
       }
     })
   },
-
+  
   onClick: function (e) {
-    
- console.log(12, wx.getStorageSync('user_id'))
-
-     const page = this;
     wx.setStorageSync('sitter_id', page.data.sitter.id);
     console.log('sitter',page.data.sitter.id)
     //console.log(22, page);
@@ -113,22 +109,6 @@ Page({
         }
       }
     });
-    
-    // if (wx.getStorageSync('user_id')) {
-    //   wx.navigateTo({
-    //     // url: '../service_request/service_request?id=' + page.data.id
-    //     url: '../service_time/service_time?id=' + page.data.serviceid
-    //   })
-    // }
-    // else {
-    //   wx.navigateTo({
-    //     url: '/pages/dog_new/dog_new',
-    //   })
-    // }
-
-
-    // console.log(page.data.serviceid)
-    // console.log(page.data.id)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

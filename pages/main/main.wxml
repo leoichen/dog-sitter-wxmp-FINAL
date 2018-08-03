@@ -3,7 +3,7 @@
     <view class = 'h1'>My Dog Sitter</view>
     <view class="btn">
       <button bindtap = "buttonClickedFind"> Find Sitter </button>
-      <button bindtap = "buttonClickedBe"> Be Sitter </button>
+      <!-- <button bindtap = "buttonClickedBe"> Be Sitter </button> -->
     </view>
   </view>
 </view>

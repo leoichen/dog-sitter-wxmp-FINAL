@@ -31,12 +31,14 @@
       </view>
     </view>
   </view>
+
+  <view><button class="button" bindtap = "buttonClickedBe"> Become a Sitter</button></view>
 </block>
 
 <block wx:else>
-<view class= "avatar-holder">   
-<view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
-<text class = "image-text"></text>
-</view>
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+  <view class= "avatar-holder">   
+  <view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
+  <text class = "image-text"></text>
+  </view>
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
 </block>

@@ -13,11 +13,11 @@ Page({
     })
   },
 
-  buttonClickedBe: function (event) {
-    wx.navigateTo({
-      url: '/pages/become_sitter/become_sitter',
-    })
-  },
+  // buttonClickedBe: function (event) {
+  //   wx.navigateTo({
+  //     url: '/pages/user_profile/user_profile',
+  //   })
+  // },
 
   /**
    * 生命周期函数--监听页面加载

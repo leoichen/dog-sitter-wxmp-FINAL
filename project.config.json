@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 26,
 			"list": [
 				{
 					"id": -1,
@@ -178,9 +178,9 @@
 					"name": "user manager",
 					"pathName": "pages/user_manager/user_manager",
 					"query": ""
-        },
-        {
-          "id": -1,
+				},
+				{
+					"id": -1,
 					"name": "booking_show",
 					"pathName": "pages/booking_show/booking_show",
 					"query": ""
@@ -189,7 +189,12 @@
 					"id": -1,
 					"name": "become_sitter",
 					"pathName": "pages/become_sitter/become_sitter",
-          "query": ""
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "accept_sitter",
+					"pathName": "pages/accept_sitter/accept_sitter"
 				}
 			]
 		}

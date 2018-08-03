@@ -1,0 +1,26 @@
+<!--pages/accept_sitter/accept_sitter.wxml-->
+<view class="wrapper">
+
+  <view class="bar-confirmation">
+    <view class="confirmation-title">Thank you!</view>
+    <view class="confirmation-message">We will update you with new requests!</view>
+  </view>
+
+  <view class="bar-contact">
+    <view class="contact-title">Next Step</view>
+    <view class="contact-actions">
+      <view class="action-icons">
+        <view bindtap="onClickHome" class="action-icon" style="background-image: url('/icons/nav_icons/font-awesome-paw.png');"></view>
+        <view bindtap="onClickProfile" class="action-icon" style="background-image: url('/icons/nav_icons/font-awesome-paw.png');"></view>
+        <!-- <view class="action-icon" style="background-image: url('/icons/nav_icons/font-awesome-paw.png');"></view> -->
+      </view>
+      <view class="action-titles">
+        <view class="action-title">Home</view>
+        <view class="action-title">Profile</view>
+        <!-- <view class="action-title">Profile</view> -->
+    </view>
+    </view>
+    
+  </view>
+</view>
+
