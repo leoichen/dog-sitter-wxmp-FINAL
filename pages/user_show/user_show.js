@@ -35,6 +35,7 @@ Page({
       url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${sitterId}`,
       method: 'GET',
       success: function (res) {
+        console.log(28, res.data.user.longitude);
         const user = res.data.user
         const first_name = res.data.user.first_name;
         const last_name = res.data.user.last_name;
@@ -44,6 +45,7 @@ Page({
         const image_url = res.data.user.image_url;
         const serviceid = res.data.user.services[0].id;
         const price = res.data.user.price
+
         page.setData({
           id: options.id,
           first_name: first_name,
@@ -76,15 +78,9 @@ Page({
                 'user': user,
                 'user.longitude': longitude,
                 'user.latitude': latitude,
-                // 'map.markers.longitude': 121.4365883,
-                // 'map.markers.latitude': 31.2219426,
-                // 'markers.longtiude': longitude,
-                // 'markers.latitude': latitude,
                 'map.hasMarkers': true,
                'markers': [{
                   iconPath: "/icons/shared_icons/marker.png",
-                  // iconPath: "icons/nav_icons/pencil.png",
-                  // id: 1,
                   latitude: latitude,
                   longitude: longitude,
                   width: 50,
@@ -93,7 +89,7 @@ Page({
                 'circles': [{
                   latitude: latitude,
                   longitude: longitude,
-                  radius: 150,
+                  radius: 300,
                   fillColor: "#00000015",
                   color: "#74CFCC",
                   strokeWidth: 2
