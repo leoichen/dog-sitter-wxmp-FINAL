@@ -21,7 +21,9 @@ Page({
    */
   onLoad: function (options) {
     const page = this;
-    const sitterId = options.id;
+    const sitterId = wx.getStorageSync('sitter_id')
+    // const sitterId = options.id; 
+    console.log("hey",sitterId)
     const userId = wx.getStorageSync('user_id');
     wx.request({
       url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`,
