@@ -1,21 +1,11 @@
-/* pages/dog_new/dog_new.wxss */
+/* pages/become_sitter/become_sitter.wxss */
 
-
-.h2-header {
- color: black;
-  font-size: 50rpx; 
-  font-weight: bold;
-  margin-top:20px; 
-  margin-left:37px;
+.title {
+  font-size: 48rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  letter-spacing: 2px;
 }
-/* Avatar */
-.userinfo-avatar {
-  width:180rpx;
-  height:180rpx;
-  margin:20rpx;
-  border-radius:50%;
-}
-
 /* form style */
 .user-input {
   width: 100%;
@@ -45,7 +35,8 @@ textarea {
   border: 1px solid #E5E5E5;
 }
 
-.button {
+
+button {
  width: 60%;
  font-weight: 700;
  letter-spacing: 1px;
@@ -65,26 +56,10 @@ textarea {
   margin-top: -61px;
 }
 
-.button-upload {
- width: 40%;
- padding:5px;
- letter-spacing: 1px;
- order: 2px solid #0099cc;
- color: white;
- background: #74CFCC;
- font-size:10px;
- margin-top:15px; 
- margin-bottom:25px;
-}
-
-.upload-dog {
-  font-size:15px;
-  margin-left:36px;
-}
-.photo {
-  
-  margin:20px ;
-  height: 400rpx;
-  width: 400rpx;
-
-}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
