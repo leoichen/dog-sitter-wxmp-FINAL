@@ -3,8 +3,8 @@
   <view class="bar-owner-info">
     <view class="icon" style="background-image: url('/nav_images/font-awesome-paw.png');"></view>
     <view class="owner-details">
-      <view class="owner-name">Kelvin Chow</view>
-      <view class="owner-address">159 Nanjing Xi Lu, Jing'an District, Shanghai</view>
+      <view class="owner-name">{{user.first_name}}</view>
+      <view class="owner-address">{{user.address}}</view>
     </view>
 </view>
 
@@ -12,8 +12,8 @@
     <view class="sitter-avatar" style="background-image: url('https://images.unsplash.com/photo-1516386408840-d718a820a05c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3b0303fc2b63c761cca164d1a1330b58&auto=format&fit=crop&w=500&q=60');">
     </view>
     <view class="request-info">
-      <view class="sitter-name">{{first_name}} {{last_name}}</view>
-      <view class="request-service">{{categories}}</view>
+      <view class="sitter-name">{{sitter.first_name}} {{sitter.last_name}}</view>
+      <view class="request-service">{{sitter.services[0].categories}}</view>
       <view class="request-time">Aug 5 2018 to Aug 8 2018</view>
     </view>
 </view>
@@ -21,7 +21,7 @@
 <view class="container-payment-content">
   <view class="bar-payment-amount">
     <view class="subtitle">Fee</view>
-    <view class="price">¥ {{price}}.00</view>
+    <view class="price">¥ {{sitter.price}}.00</view>
     </view>
   <view class="bar-payment-method">
     <view class="subtitle">Payment Method</view>
