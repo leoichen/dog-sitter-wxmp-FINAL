@@ -1,5 +1,5 @@
 /* pages/user_profile/user_profile.wxss */
-button {
+.button {
   width: 40%;
   font-weight: 700;
   letter-spacing: 1px;
@@ -12,12 +12,24 @@ button {
   margin-bottom: 15px;
 }
 
-.header {
-  font-size: 26px;
-  margin-bottom: 7.5px;
-  margin-left:40px;
-  color:#b8bec7;
-/* border: 1px solid black; */
+.avatar {
+  position: relative;
+}
+
+.img-avatar-pencil {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  bottom: 4px;
+  right: 1rpx;
+  padding-bottom: 2px;
+}
+
+.title {
+  font-size: 48rpx;
+  text-align: center;
+  margin: 20rpx auto;
+  letter-spacing: 2px;
 }
 
 .header-img {
@@ -32,6 +44,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 
 .img-avatar {
@@ -43,16 +56,11 @@ button {
 
 .image-text {
   margin-top: 15px;
-  font-size: 26px;
+  font-size: 30px;
+  color: #74CFCC;
+
 }
 
-.img-avatar-pencil {
-  position: relative;
-  height: 20px;
-  width: 20px;
- left: 60px;
- bottom: 5px;
-}
 
 .options-img {
   height: 40px;
@@ -71,12 +79,20 @@ button {
 
 .all-options {
   display: flex;
-  flex-direction:  column;
-  justify-content: space-between;
+  /* flex-direction:  column; */
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
   margin-top: 15px;
+
 }
 
 .options-text {
   font-size: 15px;
+}
+
+.container-activities {
+  border-top: solid 1px rgba(0,0,0,0.2);
+  width: 90%;
+  margin: 0 auto;
 }

@@ -178,6 +178,12 @@
 					"name": "user manager",
 					"pathName": "pages/user_manager/user_manager",
 					"query": ""
+        },
+        {
+          "id": -1,
+					"name": "booking_show",
+					"pathName": "pages/booking_show/booking_show",
+          "query": ""
 				}
 			]
 		}

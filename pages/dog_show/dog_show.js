@@ -16,23 +16,6 @@ Page({
   onLoad: function () {
     let page = this
 
-    //console.log(app.globalData);
-
-    // Get api data
-    // wx.request({
-    //   url: `http://localhost:3000/api/v1/dogs/${options.id}`,
-    //   method: 'GET',
-    //   success(res) {
-    //     const dog = res.data;
-    //     console.log(dog)
-    //     // Update local data
-    //     page.setData(
-    //       dog
-    //     );
-
-    //     wx.hideToast();
-    //   }
-    // });
     wx.getStorage({
       key: 'user_id',
       success: function (res) {
@@ -54,7 +37,7 @@ Page({
   },
 
   onClickAdd: function(e) {
-    wx.redirectTo({
+    wx.navigateTo({
       url: '/pages/dog_new/dog_new',
     })
   },

@@ -9,7 +9,7 @@ Page({
   },
   
   optionDog:function(e) {
-      wx.redirectTo({
+      wx.navigateTo({
         url: '/pages/dog_show/dog_show',
       })
     // console.log(10, wx.getStorageSync('user_id'))
