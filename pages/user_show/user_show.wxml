@@ -14,11 +14,10 @@
 </view>
 <view class="user-profile-reviews">
   <view class="user-profile-reviews-title">Reviews</view>
-  <view class="user-profile-bio">I wanted to send a quick message to let you know how pleased I was with Ann R. this past weekend.  She really showed great concern and care for my 6 cats and was very descriptive in her emails to me while I was away on holiday.  By far, she has been the best pet sitter I’ve had.  I would really like to keep using her from here on out as the pet sitter for my cats.  My cats really liked her and she just took such good care of them.  Please, if it’s possible I really want to keep Ann as my pet sitter from here on out.  It was a great experience and I knew from the “get go” upon meeting her, my cats were in excellent hands with her.  I am truly a satisfied and happy client! </view>
-  <block wx:for="{{user.reviews}}" wx:key="{{item}}">
-    <view class="user-profile-reviews-rating">Rating: {{item.rating}}</view>
-    <view class="user-profile-reviews-content">{{item.content}}</view>
-  </block>
+  <!-- <block wx:for="{{user.reviews}}" wx:key="{{item}}"> -->
+    <view class="user-profile-reviews-rating">Rating: 3</view>
+    <view class="user-profile-reviews-content">I wanted to send a quick message to let you know how pleased I was with Ann R. this past weekend.  She really showed great concern and care for my 6 cats and was very descriptive in her emails to me while I was away on holiday.  By far, she has been the best pet sitter I’ve had.  I would really like to keep using her from here on out as the pet sitter for my cats.</view>
+  <!-- </block> -->
 </view> 
 <view class="container-map">
   <view class="user-profile-reviews-title">Location</view>
