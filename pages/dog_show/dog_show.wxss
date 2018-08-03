@@ -22,3 +22,9 @@ padding:10px;
   margin-bottom: 20px;
   margin-left:20px;
 }
+
+.dog-image {
+  display:flex;
+  justify-content:space-around;
+  margin-top:10px;
+}
