@@ -34,7 +34,7 @@
       </view> 
     </view>
       
-    <button  form-type="submit" loading="{{loading}}">Submit</button>
+    <button bindtap='onClickSubmit' form-type="submit" loading="{{loading}}">Submit</button>
   
   </form>
 </view>

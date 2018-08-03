@@ -102,7 +102,6 @@ Page({
     console.log("passed data")
     console.log(page.data.user.services[0].id)
     // app.globalData.sitter_id = sitter.id
-     const page = this;
     wx.setStorageSync('sitter_id', page.data.sitter.id);
     console.log('sitter',page.data.sitter.id)
     //console.log(22, page);

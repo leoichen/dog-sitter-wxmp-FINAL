@@ -15,7 +15,8 @@
     "pages/service_acceptance/service_acceptance",
     "pages/booking_index/booking_index",
     "pages/booking_show/booking_show",
-    "pages/become_sitter/become_sitter"
+    "pages/become_sitter/become_sitter",
+    "pages/accept_sitter/accept_sitter"
   ],
   "window":{
     "backgroundTextStyle":"light",
