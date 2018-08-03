@@ -1,17 +1,13 @@
 <!--pages/user_profile/user_profile.wxml-->
-<view class = "header-img"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
+<!-- <view class = "header-img"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view> -->
 <view class = "title">Personal Center</view>
 
 
 <block wx:if="{{user}}" class = "avatar-holder">
   <view class = "avatar-holder">
       <view class="avatar">
-        <!-- <view> -->
           <image  src='{{user.image_url}}'  mode='aspectFill' class='img-avatar'></image>   
-        <!-- </view> -->
-        <!-- <view> -->
           <image  src='/icons/nav_icons/pencil.png'  mode='aspectFill'  class='img-avatar-pencil'></image>
-        <!-- </view> -->
       </view>
       <text  class = "image-text"> {{user.first_name}}</text>
   </view>

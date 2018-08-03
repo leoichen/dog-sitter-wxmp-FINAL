@@ -3,9 +3,8 @@
 
 
 <view class="title-bar">
-  <view  bindtap="leftArrow"> <image src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
+  <view class="btn-add" bindtap='onClickAdd'>+</view>
   <view class="title">My Dogs</view>
-  <view bindtap='onClickAdd'><image src="/icons/shared_icons/plus.png" class="icon-plus" ></image></view>
 </view>
 
 
