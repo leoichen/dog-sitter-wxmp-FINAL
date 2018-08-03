@@ -101,12 +101,12 @@ Page({
         console.log('wolfff',dogs) 
         if (dogs.length === 0 ) {
           wx.switchTab({
-            url: '/pages/user_profile/user_profile',
+            url: '/pages/dog_new/dog_new',
           })
         } 
         else{
           wx.navigateTo ({
-            url:'../service_index/service_index'
+            url:'../service_time/service_time'
           })
         }
       }
