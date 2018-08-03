@@ -5,43 +5,69 @@ Page({
    * 页面的初始数据
    */
   data: {
-    categories: ''
-    
+    service_id: 0,
+    categories: '',
+    date1: '',
+    date2: ''
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
-    const id = options.id;
-    wx.request({
-      url: `https://dog-sitter-woof.herokuapp.com/api/v1/services/${id}/bookings`,
-      method: 'POST',
+    this.setData({
+      'service_id': options.id
+    })
+  },
 
+  bindDateChangeStart: function (e) {
+    console.log(e.detail.value)
+    this.setData({
+      'date1': e.detail.value
+    })
+  },
+  bindDateChangeEnd: function (e) {
+    console.log(e.detail.value)
+    this.setData({
+      'date2': e.detail.value
     })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   buttonClickedNext: function (e) {
+    console.log(e)
+    console.log(getApp().globalData)
+    console.log(23, this.data)
+    const pageData= this.data;
+    console.log(24, typeof pageData.date1)
+    console.log(24, typeof new Date(pageData.date1))
+    const date1 = new Date(pageData.date1);;
+    const date2 = new Date(pageData.date2);
+
+    const newBooking = {
+      start_date: date1,
+      end_date: date2,
+      serivce_id: service_id
+    }
     const page = this;
-    wx.navigateTo({
-      url: '../user_index/user_index?query=' + page.data.categories,
-    })
+    const id = pageData.service_id;
+     wx.request({
+       url: `https://dog-sitter-woof.herokuapp.com/api/v1/services/${id}/bookings`,
+       method: 'POST',
+      data: {
+        booking: newBooking
+      },
+      success: function(res) {
+        console.log('res', res)
+      }
+    }),
+    
+    // wx.navigateTo({
+    //   url: '../user_index/user_index?query=' + page.data.categories,
+    // })
     console.log(page.data.categories)
   },
-  bindDateChangeStart: function (e) {
-    console.log(e.detail.value)
-    this.setData({
-      date1: e.detail.value
-    })
-  },
-  bindDateChangeEnd: function (e) {
-    console.log(e.detail.value)
-    this.setData({
-      date2: e.detail.value
-    })
-  },
+  
   buttonClickedBack: function (e) {
     wx.navigateTo({
       url: '../service_request/service_request',
