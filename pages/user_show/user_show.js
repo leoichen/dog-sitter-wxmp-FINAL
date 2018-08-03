@@ -85,6 +85,22 @@ Page({
   },
 
   onClick: function (e) {
+    const page = this;
+ console.log(12, wx.getStorageSync('user_id'))
+ if (wx.getStorageSync('user_id')) {
+      wx.navigateTo({
+      // url: '../service_request/service_request?id=' + page.data.id
+      url: '../service_time/service_time?id=' + page.data.user.services[0].id
+    })
+ }
+ else {
+   wx.navigateTo({
+     url: '/pages/dog_new/dog_new'
+   })
+ }
+  
+    console.log("passed data")
+    console.log(page.data.user.services[0].id)
     // app.globalData.sitter_id = sitter.id
      const page = this;
     wx.setStorageSync('sitter_id', page.data.sitter.id);

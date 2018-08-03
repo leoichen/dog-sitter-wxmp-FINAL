@@ -15,9 +15,22 @@ Page({
    */
   onLoad: function (options) {
     console.log("options:")
-    console.log(options.id)
+    console.log(options)
+    const page = this;
     this.setData({
-      service_id: options.id
+      service_id: options.id,
+      user_id: wx.getStorageSync('user_id')
+    })
+    console.log(12233,this.data.user_id)
+    wx.request({
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${this.data.user_id}`,
+      method: 'GET',
+      success: function (res) {
+        const dog_id = res.data.user.dogs[0].id
+        page.setData ({
+          dog_id: res.data.user.dogs[0].id
+        })
+      }
     })
   },
 
@@ -46,8 +59,9 @@ Page({
     const newBooking = {
       start_date: date1,
       end_date: date2,
-      serivce_id: pageData.service_id,
-      user_id: wx.getStorageSync('user_id'),
+      serivce_id: +pageData.service_id,
+      // user_id: wx.getStorageSync('user_id'), 
+      dog_id: pageData.dog_id
     }
     const page = this;
     const serviceId = pageData.service_id;
