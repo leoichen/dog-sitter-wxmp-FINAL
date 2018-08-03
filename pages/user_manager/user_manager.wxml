@@ -1,0 +1,48 @@
+<view class="header">
+  <view class="h2-header">Tell us more about yourself!</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+  
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{address}}" style="input-size"placeholder="Address" class="input-height" name="address" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{gender}}" style="input-size"placeholder="Gender" class="input-height" name="gender" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+  <form>
+    <input type="checkbox" checked></input>
+    </form>
+
+  <view class = "h2-header">Want to become a sitter? </view>
+  <label class = "switch">
+  <input type="checkbox" checked></input>
+  <span class ="slider-round"></span>
+  </label>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{services}}" style="input-size"placeholder="Service Type" class="input-height" name="service_categories" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{price}}" style="input-size"placeholder="Price" class="input-height" name="Price" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <button class="submit-btn" form-type="submit" loading="{{loading}}">Submit</button>
+  
+    </form>
+
+  </view>
+  </view>
