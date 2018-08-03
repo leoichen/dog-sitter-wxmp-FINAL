@@ -21,6 +21,7 @@ Page({
         console.log("useridblabla")
         console.log(res.data)
         const userId = res.data
+        console.log(29, userId)
           wx.request({
           url:`https://dog-sitter-woof.herokuapp.com/api/v1/users${userId}`, 
           method: 'GET',
