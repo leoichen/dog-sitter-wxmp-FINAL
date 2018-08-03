@@ -15,6 +15,11 @@ Page({
     // console.log(10, wx.getStorageSync('user_id'))
   },
   
+  optionOrder: function(e) {
+    wx.navigateTo({
+      url: '/pages/booking_index/booking_index',
+    })
+  },
   
   getUserInfo: function (e) {
     console.log(e)

@@ -4,17 +4,17 @@
   <view class="user-profile-content">
     <view class="user-profile-main-info">
     <view>
-        <view class="user-profile-name">{{first_name}} {{last_name}}</view>
-        <view class="user-profile-address">{{address}}</view>
+        <view class="user-profile-name">{{user.first_name}} {{user.last_name}}</view>
+        <view class="user-profile-address">{{user.address}}</view>
       </view>
-      <view class="user-profile-price">¥{{price}}/night</view>
+      <view class="user-profile-price">¥{{user.price}}/night</view>
     </view>
-    <view class="user-profile-bio">{{bio}}</view>
+    <view class="user-profile-bio">{{user.bio}}</view>
   </view>
 </view>
 <view class="user-profile-reviews">
   <view class="user-profile-reviews-title">Reviews</view>
-  <block wx:for="{{reviews}}" wx:key="{{item}}">
+  <block wx:for="{{user.reviews}}" wx:key="{{item}}">
     <view class="user-profile-reviews-rating">Rating: {{item.rating}}</view>
     <view class="user-profile-reviews-content">{{item.content}}</view>
   </block>
@@ -22,7 +22,7 @@
 <view class="container-map">
   <view class="user-profile-reviews-title">Location</view>
   <view>
-  
+
   <map id="map" longitude="{{user.longitude}}" latitude="{{user.latitude}}" style="width: 100%; height: 300px;" markers="{{markers}}" wx:if="{{map.hasMarkers}}" wx:if="{{map}}" circles="{{circles}}"></map>
   </view>
   </view>
