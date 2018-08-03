@@ -15,6 +15,11 @@ Page({
     // console.log(10, wx.getStorageSync('user_id'))
   },
   
+  optionOrder: function(e) {
+    wx.navigateTo({
+      url: '/pages/booking_index/booking_index',
+    })
+  },
   
   getUserInfo: function (e) {
     console.log(e)
@@ -35,7 +40,6 @@ Page({
       let page = this;
       wx.request({
         url: 'https://dog-sitter-woof.herokuapp.com/api/v1/users',
-        // url: 'http://localhost:3000/api/v1/users',
         method: 'POST',
         data: {
           user: newUser
@@ -48,15 +52,6 @@ Page({
             'user': res.data.user
           })
           wx.setStorageSync('user_id', res.data.user.id);
-          // wx.setStorageSync({'user': res.data.user,
-          // success: function (res) {
-          //   console.log(res);
-          // }
-          // })
-          //  wx.redirectTo({
-          //    url: '/pages/user_show/user_show',
-          //  })
-         
           
         }
     })

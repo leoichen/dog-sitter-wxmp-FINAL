@@ -47,15 +47,17 @@ Page({
             console.log(res.data.user)
             const user = res.data.user
             page.setData({ user: user })
-
           }
         });
       }
     })
-
-
   },
 
+  onClickAdd: function(e) {
+    wx.redirectTo({
+      url: '/pages/dog_new/dog_new',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

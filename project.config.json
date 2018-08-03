@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 21,
+			"current": 22,
 			"list": [
 				{
 					"id": -1,
@@ -135,9 +135,8 @@
 					"id": -1,
 					"name": "user profile",
 					"pathName": "pages/user_profile/user_profile",
-
-          "query":""
-        },
+					"query": ""
+				},
 				{
 					"id": -1,
 					"name": "user show",
@@ -165,7 +164,13 @@
 				{
 					"id": -1,
 					"name": "user_profile",
-					"pathName": "pages/user_profile/user_profile"
+					"pathName": "pages/user_profile/user_profile",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "booking_index",
+					"pathName": "pages/booking_index/booking_index"
 				}
 			]
 		}
