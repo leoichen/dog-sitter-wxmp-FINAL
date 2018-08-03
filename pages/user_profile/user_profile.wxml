@@ -13,7 +13,7 @@
   </view>
 
   <view class="container-activities">
-    <view class="title-activities">Activities</view>
+    <view class="title-activities">My Activities</view>
     <view class = "all-options">
       <view class = "options-order" bindtap="optionOrder">
       <image  class="options-img" src='/icons/nav_icons/list-gray.png'  mode='aspectFill'></image>
@@ -38,5 +38,5 @@
 <view> <image  src='/icons/nav_icons/font-awesome-user.png'  mode='aspectFill' class='img-avatar'></image> </view>
 <text class = "image-text"></text>
 </view>
-<button open-type="getUserInfo" bindgetuserinfo="getUserInfo">Login</button>
+<button open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="getUserInfo">Login</button>
 </block>

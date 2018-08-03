@@ -81,7 +81,7 @@ Page({
   
   buttonClickedBack: function (e) {
     wx.navigateTo({
-      url: '../service_request/service_request',
+      url: '../user_show/user_show',
     })
   },
   onReady: function () {
