@@ -194,7 +194,8 @@
 				{
 					"id": -1,
 					"name": "accept_sitter",
-					"pathName": "pages/accept_sitter/accept_sitter"
+					"pathName": "pages/accept_sitter/accept_sitter",
+          "query": ""
 				}
 			]
 		}
