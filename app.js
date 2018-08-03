@@ -27,5 +27,7 @@ App({
       }
     })
   },
-  globalData: {}
+  globalData: {
+    sitter_id: 0
+  }
 })

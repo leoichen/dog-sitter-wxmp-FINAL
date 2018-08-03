@@ -1,4 +1,4 @@
-// pages/user_show/user_show.js
+const app = getApp();
 Page({
 
   /**
@@ -19,17 +19,23 @@ Page({
     autoplay: true,
     interval: 10000,
     duration: 5000,
+    'sitter':[]
+   
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options)
+    console.log(222, options)
     const page = this;
-    const id = options.id;
-    const sitterId = options.id;
-    console.log(1, id);
+    const currentSitter = options;
+    const sitterId = options.id
+    page.setData({
+      'sitter': currentSitter})
+    // const sitterId = sitter.id
+    console.log(1, options);
     console.log(2, sitterId);
     // const categories = options.categories
     wx.request({
@@ -95,6 +101,48 @@ Page({
   
     console.log("passed data")
     console.log(page.data.user.services[0].id)
+    // app.globalData.sitter_id = sitter.id
+     const page = this;
+    wx.setStorageSync('sitter_id', page.data.sitter.id);
+    console.log('sitter',page.data.sitter.id)
+    //console.log(22, page);
+
+    console.log(12, wx.getStorageSync('user_id'))
+    const userId = wx.getStorageSync('user_id') 
+    wx.request({
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`,
+      method: 'GET',
+      success(res) {
+        const dogs = res.data.user.dogs 
+        console.log('wolfff',dogs) 
+        if (dogs.length === 0 ) {
+          wx.switchTab({
+            url: '/pages/user_profile/user_profile',
+          })
+        } 
+        else{
+          wx.navigateTo ({
+            url:'../service_index/service_index'
+          })
+        }
+      }
+    });
+    
+    // if (wx.getStorageSync('user_id')) {
+    //   wx.navigateTo({
+    //     // url: '../service_request/service_request?id=' + page.data.id
+    //     url: '../service_time/service_time?id=' + page.data.serviceid
+    //   })
+    // }
+    // else {
+    //   wx.navigateTo({
+    //     url: '/pages/dog_new/dog_new',
+    //   })
+    // }
+
+
+    // console.log(page.data.serviceid)
+    // console.log(page.data.id)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -114,34 +162,34 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })

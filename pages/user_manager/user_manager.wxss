@@ -1,5 +1,3 @@
-/* pages/dog_new/dog_new.wxss */
-
 
 .h2-header {
  color: black;
@@ -7,13 +5,6 @@
   font-weight: bold;
   margin-top:20px; 
   margin-left:37px;
-}
-/* Avatar */
-.userinfo-avatar {
-  width:180rpx;
-  height:180rpx;
-  margin:20rpx;
-  border-radius:50%;
 }
 
 /* form style */
@@ -26,15 +17,18 @@
   height: 14em; 
   width:16em;
 }
+
 .input-label {
   font-size: 40rpx;
 }
+
 textarea {
   padding: 10rpx 0;
   font-size: 35rpx;
   width: 100%;
   color:black;
 }
+
 .text-area-wrap {
   padding: 20rpx 30rpx;
   background-color: #fff;
@@ -45,7 +39,13 @@ textarea {
   border: 1px solid #E5E5E5;
 }
 
-.button {
+.container {
+  width: 100%; 
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.submit-btn {
  width: 60%;
  font-weight: 700;
  letter-spacing: 1px;
@@ -59,32 +59,17 @@ textarea {
 
 .wrap {
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: -61px;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.button-upload {
- width: 40%;
- padding:5px;
- letter-spacing: 1px;
- order: 2px solid #0099cc;
- color: white;
- background: #74CFCC;
- font-size:10px;
- margin-top:15px; 
- margin-bottom:25px;
-}
-
-.upload-dog {
-  font-size:15px;
-  margin-left:36px;
-}
-.photo {
-  
-  margin:20px ;
-  height: 400rpx;
-  width: 400rpx;
-
+.sitter-btn {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  color: #74CFCC;
+  background-color: white;
+  border: none;
+  bottom: 70px;
+  left: 65%;
 }
