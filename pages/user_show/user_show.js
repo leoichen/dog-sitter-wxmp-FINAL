@@ -19,14 +19,6 @@ Page({
     autoplay: true,
     interval: 10000,
     duration: 5000,
-    circles: [{
-      latitude: 31.2219426,
-      longitude: 121.4365883,
-      radius: 150,
-      fillColor: "#00000015",
-      color: "#74CFCC",
-      strokeWidth: 2
-    }]
   },
 
   /**
@@ -35,9 +27,12 @@ Page({
   onLoad: function (options) {
     const page = this;
     const id = options.id;
+    const sitterId = options.id;
+    console.log(1, id);
+    console.log(2, sitterId);
     // const categories = options.categories
     wx.request({
-      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${id}`,
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${sitterId}`,
       method: 'GET',
       success: function (res) {
         const user = res.data.user
@@ -60,13 +55,12 @@ Page({
           user: user,
           serviceid: serviceid
         })
-    },
-
-    const sitterId = options.id;
+      }
+    }),
       wx.getStorage({
         key: 'user_id',
         success: function (res) {
-          const userId = res.data
+          // const userId = res.data
           wx.request({
            // url: `http://localhost:3000/api/v1/users/${sitterId}`,         
             url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${sitterId}`,
@@ -95,6 +89,14 @@ Page({
                   longitude: longitude,
                   width: 50,
                   height: 50,
+                }],
+                'circles': [{
+                  latitude: latitude,
+                  longitude: longitude,
+                  radius: 150,
+                  fillColor: "#00000015",
+                  color: "#74CFCC",
+                  strokeWidth: 2
                 }]
                 });
             }
@@ -105,11 +107,21 @@ Page({
 
   onClick: function (e) {
     const page = this;
-    wx.navigateTo({
+ console.log(12, wx.getStorageSync('user_id'))
+ if (wx.getStorageSync('user_id')) {
+      wx.navigateTo({
       // url: '../service_request/service_request?id=' + page.data.id
       url: '../service_time/service_time?id=' + page.data.serviceid
     })
-    console.log(page.data.serviceid)
+ }
+ else {
+   wx.navigateTo({
+     url: '/pages/dog_new/dog_new',
+   })
+ }
+  
+ 
+    // console.log(page.data.serviceid)
     // console.log(page.data.id)
   },
   /**
