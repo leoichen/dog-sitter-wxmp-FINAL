@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 26,
 			"list": [
 				{
 					"id": -1,
@@ -190,6 +190,12 @@
 					"name": "become_sitter",
 					"pathName": "pages/become_sitter/become_sitter",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "accept_sitter",
+					"pathName": "pages/accept_sitter/accept_sitter",
+          "query": ""
 				}
 			]
 		}

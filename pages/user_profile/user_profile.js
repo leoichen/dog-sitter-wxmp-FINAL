@@ -15,6 +15,12 @@ Page({
     // console.log(10, wx.getStorageSync('user_id'))
   },
   
+  buttonClickedBe: function (event) {
+    wx.navigateTo({
+      url: '/pages/become_sitter/become_sitter',
+    })
+  },
+
   optionOrder: function(e) {
     wx.navigateTo({
       url: '/pages/booking_index/booking_index',

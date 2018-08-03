@@ -31,6 +31,8 @@
       </view>
     </view>
   </view>
+
+  <view><button class="button" bindtap = "buttonClickedBe"> Become a Sitter</button></view>
 </block>
 
 <block wx:else>
