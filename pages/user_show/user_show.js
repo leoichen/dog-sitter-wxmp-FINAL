@@ -25,6 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options)
     const page = this;
     const id = options.id;
     const sitterId = options.id;
@@ -83,18 +84,17 @@ Page({
  if (wx.getStorageSync('user_id')) {
       wx.navigateTo({
       // url: '../service_request/service_request?id=' + page.data.id
-      url: '../service_time/service_time?id=' + page.data.serviceid
+      url: '../service_time/service_time?id=' + page.data.user.services[0].id
     })
  }
  else {
    wx.navigateTo({
-     url: '/pages/dog_new/dog_new',
+     url: '/pages/dog_new/dog_new'
    })
  }
   
- 
-    // console.log(page.data.serviceid)
-    // console.log(page.data.id)
+    console.log("passed data")
+    console.log(page.data.user.services[0].id)
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

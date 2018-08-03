@@ -5,6 +5,7 @@
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
   background-size: cover !important;
   border-radius: 2px;
+  
 }
 .h2 {
   text-align:center;

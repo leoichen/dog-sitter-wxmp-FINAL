@@ -18,38 +18,35 @@ Page({
 
   },
 
-  bindSubmit: function(event) {
-    let page = this;
-    const newDog = event.detail.value;
-    wx.getStorage({
-      key: 'user_id',
-      success: function (res) {
-        console.log("userlala")
-        console.log(res.data)
-        const userId = res.data
-        newDog.user_id = userId 
-        newDog.image_url = page.data.dog_image;
-        console.log(3,newDog)
-        wx.request({
-          url: `https://dog-sitter-woof.herokuapp.com/api/v1/dogs`,
-          method:'POST',
-          data:{
-            user_id: userId,
-            dog:newDog
-          },
-          success:function(res) {
-            console.log(23, res)
-  //           wx.navigateTo({
-  //           url: '/pages/dog_show/dog_show'
-  // })
-  // wx.navigateBack({
-    
-  // })
-          }
+bindSubmit: function(event) {
+  let page = this;
+  const newDog = event.detail.value;
+  wx.getStorage({
+    key: 'user_id',
+    success: function (res) {
+      console.log("userlala")
+      console.log(res.data)
+      const userId = res.data
+      newDog.user_id = userId 
+      newDog.image_url = page.data.dog_image;
+      console.log(3,newDog)
+      wx.request({
+        url: `https://dog-sitter-woof.herokuapp.com/api/v1/dogs`,
+        method:'POST',
+        data:{
+          user_id: userId,
+          dog:newDog
+        },
+        success:function(res) {
+          console.log(23, res)
+          wx.navigateTo({
+          url: '/pages/dog_show/dog_show'
         })
-      }
-    }) 
-  },
+        }
+      })
+    }
+  }) 
+},
 
 
   takePhoto: function () {
@@ -93,12 +90,7 @@ Page({
         });
     })
   },
-  
-  viewDog:function() {
-    wx.navigateTo({
-      url: '/pages/dog_show/dog_show'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
