@@ -1,33 +1,40 @@
 <!--pages/user_profile/user_profile.wxml-->
 <view class = "header-img"> <image  src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
-<view class = "header">Personal 
-</view>
-<!-- line break? -->
-<view class = "header">Center </view>
+<view class = "title">Personal Center</view>
+
 
 <block wx:if="{{user}}" class = "avatar-holder">
-<view class = "avatar-holder">
-<view><image  src='{{user.image_url}}'  mode='aspectFill' class='img-avatar'></image> </view>
-<view><image  src='/icons/nav_icons/pencil.png'  mode='aspectFill' class='img-avatar-pencil'></image></view>
-<text  class = "image-text"> {{user.first_name}}</text>
-</view>
+  <view class = "avatar-holder">
+      <view class="avatar">
+        <!-- <view> -->
+          <image  src='{{user.image_url}}'  mode='aspectFill' class='img-avatar'></image>   
+        <!-- </view> -->
+        <!-- <view> -->
+          <image  src='/icons/nav_icons/pencil.png'  mode='aspectFill'  class='img-avatar-pencil'></image>
+        <!-- </view> -->
+      </view>
+      <text  class = "image-text"> {{user.first_name}}</text>
+  </view>
 
-<view class = "all-options">
-<view class = "options-order" bindtap="optionOrder">
-<image  class="options-img" src='/icons/nav_icons/order.png'  mode='aspectFill'></image>
-<text class = "options-text"> My Orders </text>
-</view>
+  <view class="container-activities">
+    <view class="title">Your Activities</view>
+    <view class = "all-options">
+      <view class = "options-order" bindtap="optionOrder">
+      <image  class="options-img" src='/icons/nav_icons/list-gray.png'  mode='aspectFill'></image>
+      <text class = "options-text">Orders</text>
+      </view>
 
-<view class = "options-order" bindtap="optionDog">
-<image  class="options-img" src='/icons/nav_icons/font-awesome-paw.png'  mode='aspectFill'></image>
-<text class = "options-text"> My Dogs </text>
-</view>
+      <view class = "options-order" bindtap="optionDog">
+        <image  class="options-img" src='/icons/nav_icons/font-awesome-paw.png'  mode='aspectFill'></image>
+      <text class = "options-text">Dogs</text>
+      </view>
 
-<view class = "options-order" bindtap="optionService">
-<image  class="options-img" src='/icons/nav_icons/rocket.png'  mode='aspectFill'></image>
-<text class = "options-text"> My Services </text>
-</view>
-</view>
+      <view class = "options-order" bindtap="optionService">
+        <image  class="options-img" src='/icons/nav_icons/rocket-gray.png'  mode='aspectFill'></image>
+        <text class = "options-text">Services</text>
+      </view>
+    </view>
+  </view>
 </block>
 
 <block wx:else>

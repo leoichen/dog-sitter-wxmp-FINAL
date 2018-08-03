@@ -18,29 +18,23 @@ padding:10px;
 }
 
 .title-bar {
-  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .title {
-  position: absolute;
-  left: 5px;
-  top: 5px;
   font-size: 24px;
   
 }
 .icon-plus {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 5px;
-  top: 5px;
+  width: 20px;
+  height: 20px;
 }
 
 .header-img {
   height: 20px;
   width: 20px;
-  margin-bottom: 20px;
-  margin-left:20px;
 }
 
 .dog-image {

@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 22,
+			"current": 23,
 			"list": [
 				{
 					"id": -1,
@@ -170,7 +170,13 @@
 				{
 					"id": -1,
 					"name": "booking_index",
-					"pathName": "pages/booking_index/booking_index"
+					"pathName": "pages/booking_index/booking_index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "booking_show",
+					"pathName": "pages/booking_show/booking_show"
 				}
 			]
 		}
