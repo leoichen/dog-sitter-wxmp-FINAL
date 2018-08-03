@@ -16,9 +16,30 @@ padding:10px;
 .pet {
   margin-bottom:8px;
 }
+
+.title-bar {
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 24px;
+  
+}
+.icon-plus {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
 .header-img {
   height: 20px;
   width: 20px;
   margin-bottom: 20px;
   margin-left:20px;
 }
+

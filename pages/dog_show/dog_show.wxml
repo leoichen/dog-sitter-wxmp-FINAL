@@ -1,8 +1,13 @@
 <!--pages/dog_show/dog_show.wxml-->
 
 
-   
+
+<view class="title-bar">
+  <view class="title">My Dogs</view>
+  <view bindtap='onClickAdd'><image src="/icons/shared_icons/plus.png" class="icon-plus" ></image></view>
+</view>
 <view  bindtap="leftArrow"> <image src='/icons/nav_icons/left-arrow.png'  mode='aspectFill' class='header-img'></image> </view>
+
 
 <block wx:for="{{user.dogs}}" wx:for-item="item">
  <image class="dog-photo" src='{{item.image_url}}' mode='aspectFill' class='dog-image'></image> 

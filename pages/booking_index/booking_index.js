@@ -1,4 +1,4 @@
-// pages/my_order/my_order.js
+// pages/booking_index/booking_index.js
 Page({
 
   /**
