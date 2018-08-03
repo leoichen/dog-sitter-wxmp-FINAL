@@ -1,0 +1,41 @@
+<view class="header">
+  <view class="h2-header">Tell us more about yourself!</view>
+  </view>
+  <view class="container">
+  <view class="wrap">
+    <view class="sitter-btn" bindtap="becomeSitter"> Become a Sitter</view>
+
+    <form bindsubmit="bindSubmit">
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{address}}" style="input-size"placeholder="Address" class="input-height" name="address" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+    <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{gender}}" style="input-size"placeholder="Gender" class="input-height" name="gender" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+     <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{bio}}" style="input-size"placeholder="Bio" class="input-height" name="bio" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+   <view class="user-input">
+      <view class="text-area-wrap">
+      <textarea value="{{phone_number}}" style="input-size"placeholder="WeChat ID" class="input-height" name="phone_number" maxlength="-1" auto-height />
+      </view>
+    </view>
+
+
+
+    <button class="submit-btn" form-type="submit" loading="{{loading}}">Submit</button>
+  
+    </form>
+
+  </view>
+  </view>
