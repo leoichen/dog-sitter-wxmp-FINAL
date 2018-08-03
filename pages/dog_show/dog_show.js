@@ -1,6 +1,6 @@
 var app = getApp()
 Page({
-
+  
   /**
    * 页面的初始数据
    */
@@ -62,7 +62,11 @@ Page({
   onReady: function () {
   
   },
-
+  leftArrow: function (e) {
+    wx.switchTab({
+      url: '/pages/user_profile/user_profile',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */
