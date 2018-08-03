@@ -3,7 +3,8 @@
   </view>
   <view class="container">
   <view class="wrap">
-  
+    <view class="sitter-btn" bindtap="becomeSitter"> Become a Sitter</view>
+
     <form bindsubmit="bindSubmit">
 
     <view class="user-input">
@@ -18,27 +19,19 @@
       </view>
     </view>
 
-  <form>
-    <input type="checkbox" checked></input>
-    </form>
-
-  <view class = "h2-header">Want to become a sitter? </view>
-  <label class = "switch">
-  <input type="checkbox" checked></input>
-  <span class ="slider-round"></span>
-  </label>
-
-    <view class="user-input">
+     <view class="user-input">
       <view class="text-area-wrap">
-      <textarea value="{{services}}" style="input-size"placeholder="Service Type" class="input-height" name="service_categories" maxlength="-1" auto-height />
+      <textarea value="{{bio}}" style="input-size"placeholder="Bio" class="input-height" name="bio" maxlength="-1" auto-height />
       </view>
     </view>
 
-    <view class="user-input">
+   <view class="user-input">
       <view class="text-area-wrap">
-      <textarea value="{{price}}" style="input-size"placeholder="Price" class="input-height" name="Price" maxlength="-1" auto-height />
+      <textarea value="{{phone_number}}" style="input-size"placeholder="WeChat ID" class="input-height" name="phone_number" maxlength="-1" auto-height />
       </view>
     </view>
+
+
 
     <button class="submit-btn" form-type="submit" loading="{{loading}}">Submit</button>
   

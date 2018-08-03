@@ -62,5 +62,26 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  bindSubmit: function (res) {
+    console.log(res)
+    const updatedUser = res.detail.value;
+    const userId = wx.getStorageSync('user_id');
+    console.log(23, userId);
+    wx.request({
+      url: `https://dog-sitter-woof.herokuapp.com/api/v1/users/${userId}`,
+      method: 'PUT',
+      data: {
+        user: updatedUser
+      },
+      success: function(res) {
+        console.log(24, res)
+        wx.redirectTo({
+          url: '/pages/user_profile/user_profile',
+        })
+      }
+    })
   }
 })
+
