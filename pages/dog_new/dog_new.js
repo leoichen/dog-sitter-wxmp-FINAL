@@ -38,9 +38,12 @@ Page({
             dog:newDog
           },
           success:function(res) {
-            wx.navigateTo({
-            url: '/pages/dog_show/dog_show'
-  })
+  //           wx.navigateTo({
+  //           url: '/pages/dog_show/dog_show'
+  // })
+  // wx.navigateBack({
+    
+  // })
           }
         })
       }
